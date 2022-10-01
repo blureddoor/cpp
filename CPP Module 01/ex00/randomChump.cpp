@@ -12,7 +12,9 @@
 
 #include "Zombie.hpp"
 
-Zombie *randomChump(std::string name)
+void	randomChump( std::string name )
 {
+	Zombie randomChump = Zombie(name);
 
+	randomChump.announce();
 }

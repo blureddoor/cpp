@@ -11,11 +11,53 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-
+/*
 int main(void)
 {
-	Zombie zombie;
-	std::string	zombie_name;
-	zombie_name = "Leo";
-	zombie.anounce(zombie_name);
+	std::string name = "Leo";
+	Zombie zombie(name);
+	zombie.announce();
+}
+*/
+
+/*
+int	main( void )
+{
+	std::cout << "Creating the first Zombie, Robert, \"manually\"" << std::endl;
+	{
+		Zombie	robert("Robert");
+		robert.announce();
+	}
+	std::cout << "Creating the second Zombie, Georges, using the function"
+		" newZombie"<< std::endl;
+	{
+		Zombie	*georges = newZombie("Georges");
+		georges->announce();
+
+		delete georges;
+	}
+	{
+		std::cout << "Creating the third Zombie, Mark, using the function"
+			" randomChump"<< std::endl;
+		randomChump("Mark");
+	}
+}
+
+*/
+int	main( void )
+{
+	std::cout << "Creating the first +zombie+, Robert, \"manually\""
+		<< std::endl;
+	{
+		Zombie	robert("Robert");
+		robert.announce();
+	}
+	std::cout << "Creating the second +zombie+, Georges, using the function"
+		" newZombie"<< std::endl;
+		Zombie	*georges = newZombie("Georges");
+		georges->announce();
+		delete georges;
+	std::cout << "Creating the third +zombie+, Mark, using the function"
+			" randomChump"<< std::endl;
+		randomChump("Mark");
 }
