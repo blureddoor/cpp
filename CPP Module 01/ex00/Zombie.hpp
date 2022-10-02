@@ -4,21 +4,19 @@
 # include <iostream>
 # include <string>
 
-
-class Zombie{
-
+class	Zombie
+{
 	private:
-		std::string name;
+		std::string	m_name;
 	public:
-		void announce(void) const;
 		Zombie(std::string name);
-		~Zombie()
-		{
-			std::cout << name << " was destroyed" << std::endl;
-		}
+		~Zombie(void);
+		void	announce(void);
 };
 
+/* Return pointer to Zombie object allocated with "new"*/
 Zombie* newZombie(std::string name);
+/*Creates new Zombie created on the stack */
 void	randomChump(std::string name);
 #endif
 

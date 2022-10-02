@@ -12,11 +12,27 @@
 
 #include "Zombie.hpp"
 
-
-
+/*
 Zombie* newZombie(std::string name)
 {
 	Zombie *newZombie = new Zombie(name);
 
 	return (newZombie);
+}
+*/
+
+Zombie::Zombie(std::string name)
+{
+	this->m_name = name;
+	std::cout << "Zombie object: " << this->m_name << " created" << std::endl;
+}
+
+Zombie::~Zombie()
+{
+	std::cout << "Zombie object: " << this->m_name << " destroyed" << std::endl;
+}
+
+void	Zombie::announce()
+{
+	std::cout << this->m_name << " said: BraiiiiiiinnnzzzZ..." << std::endl;
 }

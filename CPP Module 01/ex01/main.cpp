@@ -35,7 +35,7 @@ int	main( void )
 	}
 }
 
-*/
+
 int	main( void )
 {
 	std::cout << "Creating the first +zombie+, Robert, \"manually\""
@@ -53,3 +53,18 @@ int	main( void )
 			" randomChump"<< std::endl;
 		randomChump("Mark");
 }
+*/
+
+int	main(void)
+{
+	int	size;
+
+	size = 6;
+	Zombie *horde = zombieHorde(size, "");
+	std::cout << std::endl;
+	for (int i = 0; i < size; i++)
+		horde[i].announce();
+	std::cout << std::endl;
+	delete [] horde;
+}
+

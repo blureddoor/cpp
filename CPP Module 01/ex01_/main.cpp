@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvintila <lvintila@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 20:41:32 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/01 13:32:56 by lvintila         ###   ########.fr       */
+/*   Created: 2022/10/01 13:41:39 by lvintila          #+#    #+#             */
+/*   Updated: 2022/10/01 13:42:42 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie*	newZombie(std::string name)
+int	main(void)
 {
-	Zombie *newZombie = new Zombie(name);
+	int	size;
 
-	return (newZombie);
+	size = 8;
+	Zombie *horde;
+	std::cout << std::endl;
+	horde = zombieHorde(size, "Destructor zombie horde member");
+	std::cout << std::endl;
+	delete [] horde;
 }
+
