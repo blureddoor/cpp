@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvintila <lvintila@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:37:26 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/01 13:43:44 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/13 22:04:56 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,20 @@ int main(void)
 	// Display the address
 	std::cout << std::endl;
 	
-	std::cout << "Address of the string: " << std::endl;
-	std::cout << "----------------------" << std::endl;
-	std::cout << "via string address: " << &str << std::endl;
-	std::cout << "via stringPTR: " << stringPTR << std::endl;
-	std::cout << "via stringREF: " << &stringREF << std::endl;
+	std::cout << "Address of the string:" << std::endl;
+	std::cout << "----------------------------------------" << std::endl;
+	std::cout << "via string address:	" << &str << std::endl;
+	std::cout << "via stringPTR: 		" << stringPTR << std::endl;
+	std::cout << "via stringREF: 		" << &stringREF << std::endl;
 
 	// Display the value
 	std::cout << std::endl;
 
-	std::cout << "Value of the string: " << std::endl;
-	std::cout << "----------------------" << std::endl;
-	std::cout << "via string itself: " << str << std::endl;
-	std::cout << "via stringPTR: " << *stringPTR << std::endl;
-	std::cout << "via stringREF: " << stringREF << std::endl;
+	std::cout << "Value of the string:	" << std::endl;
+	std::cout << "----------------------------------------" << std::endl;
+	std::cout << "via string itself: 	" << str << std::endl;
+	std::cout << "via stringPTR: 		" << *stringPTR << std::endl;
+	std::cout << "via stringREF: 		" << stringREF << std::endl;
 	
 	std::cout << std::endl;
 	return (0);

@@ -1,4 +1,4 @@
-NAME		=	ex03
+NAME		=	attack
 
 SRC			=	main.cpp \
 				Weapon.cpp \

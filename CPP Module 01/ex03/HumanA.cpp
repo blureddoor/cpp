@@ -1,9 +1,20 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/13 21:19:31 by lvintila          #+#    #+#             */
+/*   Updated: 2022/10/13 21:45:53 by lvintila         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "HumanA.hpp"
 
 // Constructor (HumanA = with weapon)
-HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
+HumanA::HumanA(std::string name, Weapon &weapon) 
+	: m_name(name), m_weapon(weapon)
 {
 }
 
@@ -16,6 +27,6 @@ HumanA::~HumanA()
 // NAME attacks with his WEAPON_TYPE
 void	HumanA::attack( void ) const
 {
-	std::cout << this->_name << " attacks with his "
-				<< this->_weapon.get_type() << std::endl;
+	std::cout << this->m_name << " attacks with his "
+				<< this->m_weapon.get_type() << std::endl;
 }

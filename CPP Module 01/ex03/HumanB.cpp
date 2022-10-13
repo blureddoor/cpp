@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/13 21:19:13 by lvintila          #+#    #+#             */
+/*   Updated: 2022/10/13 21:46:38 by lvintila         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "HumanB.hpp"
 
 // Constructor (HumanB = without weapon)
-HumanB::HumanB(std::string name) : _name(name)
+HumanB::HumanB(std::string name)
+	: m_name(name)
 {
-	this->_weapon = NULL;
+	this->m_weapon = NULL;
 }
 
 // Destructor
@@ -16,14 +28,14 @@ HumanB::~HumanB()
 // NAME attacks with his WEAPON_TYPE
 void	HumanB::attack( void ) const
 {
-	if (this->_weapon)
+	if (this->m_weapon)
 	{
-		std::cout << this->_name << " attacks with his "
-				<< (*(this->_weapon)).get_type() << std::endl;
+		std::cout << this->m_name << " attacks with his "
+				<< (*(this->m_weapon)).get_type() << std::endl;
 	}
 	else
 	{
-		std::cout << this->_name << " tries to attack but has no weapon "
+		std::cout << this->m_name << " tries to attack but has no weapon "
 					<< std::endl;
 	}
 	
@@ -31,5 +43,5 @@ void	HumanB::attack( void ) const
 
 void HumanB::setWeapon(Weapon &new_weapon)
 {
-	this->_weapon = &new_weapon;
+	this->m_weapon = &new_weapon;
 }

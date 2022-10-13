@@ -1,0 +1,7 @@
+I'm replacing all the occurrence of "9" with word "nine"
+
+9
+99
+999
+esto es un 9
+y este es tambien un 9_nine
