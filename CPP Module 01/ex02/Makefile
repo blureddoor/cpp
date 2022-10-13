@@ -26,15 +26,3 @@ fclean:			clean
 re:				fclean $(NAME)
 
 .PHONY:			all clean fclean re
-
-test1: all
-	./$(EXEC) test.txt 9 nine
-
-test2: all
-	./$(EXEC) empty_file "a" "b"
-
-test3: all
-	./$(EXEC) non_existing_file a b
-
-test4: all
-	./$(EXEC) test.txt "" ""
