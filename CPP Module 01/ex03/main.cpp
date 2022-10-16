@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:53:57 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/13 22:09:22 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/16 11:57:17 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 		
 		HumanA bob("Bob", club);
 		bob.attack();
-		club.setType("some other typo of club");
+		club.setType("some other type of club");
 		bob.attack();
 	}
 	{
@@ -33,4 +33,4 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
-}
+}  

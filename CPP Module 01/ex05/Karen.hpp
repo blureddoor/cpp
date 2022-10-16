@@ -7,23 +7,23 @@
 
 
 class Karen{
-	typedef struct s_status
-	{
-		std::string name;
-		void(Karen::*ptr)(void);
-	}	t_status;
 	public:
 		void complain(std::string level);
 		Karen(void);
 
 	private:
-		t_status stat[4];
-		void debug(void);
-		void info(void);
-		void warning(void);
-		void error(void);
+		typedef struct	s_status
+		{
+					std::string	m_name;
+					void(Karen::*ptr)(void);
+		}			t_status;
+		t_status	status[4];
+		void		debug(void);
+		void 		info(void);
+		void 		warning(void);
+		void		error(void);
 
-		void init(void);
+		void		init(void);
 };
 
 #endif

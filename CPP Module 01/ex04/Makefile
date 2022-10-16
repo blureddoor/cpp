@@ -28,13 +28,13 @@ re:				fclean $(NAME)
 .PHONY:			all clean fclean re
 
 test1: all
-	./$(EXEC) test.txt 9 nine
+	./$(NAME) test one 1
 
 test2: all
-	./$(EXEC) empty_file "a" "b"
+	./$(NAME) empty_file a b
 
 test3: all
-	./$(EXEC) non_existing_file a b
+	./$(NAME) non_existing_file a b
 
 test4: all
-	./$(EXEC) test.txt "" ""
+	./$(NAME) test "" ""

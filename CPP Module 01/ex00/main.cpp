@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvintila <lvintila@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 21:50:37 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/01 13:31:26 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/16 12:34:32 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,17 @@ int	main( void )
 
 int	main(void)
 {
-	Zombie zombie("Tracy < manual >");
+	Zombie zombie("Tracy		via manual");
 	zombie.announce();
+	std::cout << std::endl;
 
-	Zombie *z = newZombie("RagnaRock < newZombie >");
-	z->announce();
 	
-	randomChump("TarikBauman < randomChump >");
+	Zombie *z = newZombie("RagnaRock	via newZombie");
+	z->announce();
+	std::cout << std::endl;
+	
+	randomChump("TarikBauman	via randomChump");
+	std::cout << std::endl;
 	
 	delete z;
 }

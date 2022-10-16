@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Karen.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvintila <lvintila@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 20:00:07 by lvintila          #+#    #+#             */
-/*   Updated: 2022/09/22 20:01:43 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/16 11:34:20 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@ void Karen::complain(std::string level)
 {
 	for (int i = 0; i < 4 ; i++)
 	{
-		if (stat[i].name == level)
+		if (status[i].m_name == level)
 		{
-			(this->*(stat[i].ptr))();
+			(this->*(status[i].ptr))();
 		}
 	}
 }
@@ -29,14 +29,14 @@ Karen::Karen(void)
 
 void Karen::init(void)
 {
-	stat[0].name = "debug";
-	stat[0].ptr = &Karen::debug;
-	stat[1].name = "info";
-	stat[1].ptr = &Karen::info;
-	stat[2].name = "warning";
-	stat[2].ptr = &Karen::warning;
-	stat[3].name = "error";
-	stat[3].ptr = &Karen::error;
+	status[0].m_name = "debug";
+	status[0].ptr = &Karen::debug;
+	status[1].m_name = "info";
+	status[1].ptr = &Karen::info;
+	status[2].m_name = "warning";
+	status[2].ptr = &Karen::warning;
+	status[3].m_name = "error";
+	status[3].ptr = &Karen::error;
 }
 
 void    Karen::debug(void)
@@ -48,18 +48,21 @@ void    Karen::debug(void)
 
 void    Karen::info(void)
 {
+	std::cout << std::endl;
     std::cout << "[ INFO ] " << std::endl;
 	std::cout << "I cannot believe adding extra bacon cost more money. You don’t put enough! If you did I would not have to ask for it!." << std::endl;
 }
 
 void    Karen::warning(void)
 {
+	std::cout << std::endl;
     std::cout << "[ WARNING ] " << std::endl;
 	std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming here for years and you just started working here last month." << std::endl;
 }
 
 void    Karen::error(void)
 {
+	std::cout << std::endl;
     std::cout << "[ ERROR ] " << std::endl;
 	std::cout << "This is unacceptable, I want to speak to the manager now." << std::endl;
 	std::cout << std::endl;

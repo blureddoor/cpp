@@ -16,6 +16,7 @@ class	Zombie
 
 /* Return pointer to Zombie object allocated with "new"*/
 Zombie* newZombie(std::string name);
+
 /*Creates new Zombie created on the stack */
 void	randomChump(std::string name);
 #endif

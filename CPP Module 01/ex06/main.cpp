@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvintila <lvintila@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 21:50:37 by lvintila          #+#    #+#             */
-/*   Updated: 2022/09/23 23:03:05 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/16 11:14:51 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
