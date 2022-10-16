@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contacts.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvintila <lvintila@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:01:05 by lvintila          #+#    #+#             */
-/*   Updated: 2022/09/21 20:12:39 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/16 13:01:40 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 
 Contact::Contact()
 {
-	first_name.clear();
-	last_name.clear();
-	nickname.clear();
-	phone_number.clear();
-	darkest_secret.clear();
+	m_first_name.clear();
+	m_last_name.clear();
+	m_nickname.clear();
+	m_phone_number.clear();
+	m_darkest_secret.clear();
 }
 
 /*
@@ -32,10 +32,10 @@ Contact::Contact()
  */
 bool    Contact::is_valid_phone_number()
 {
-	if (phone_number.length() != 9)
+	if (m_phone_number.length() != 9)
 		return (false);
-	for (size_t i = 0; i < phone_number.length(); i++)
-		if (!isdigit(phone_number[i]))
+	for (size_t i = 0; i < m_phone_number.length(); i++)
+		if (!isdigit(m_phone_number[i]))
 			return (false);
 	return (true);
 }
@@ -46,24 +46,24 @@ bool    Contact::is_valid_phone_number()
 void    Contact::read_contact()
 {
 	std::cout << "First name: ";
-	getline(std::cin, first_name);
-	rtrim(first_name);
+	getline(std::cin, m_first_name);
+	rtrim(m_first_name);
 	std::cout << "Last name: ";
-	getline(std::cin, last_name);
-	rtrim(last_name);
+	getline(std::cin, m_last_name);
+	rtrim(m_last_name);
 	std::cout << "Nickname: ";
-	getline(std::cin, nickname);
-	rtrim(nickname);
+	getline(std::cin, m_nickname);
+	rtrim(m_nickname);
 	do
 	{
 		std::cout << "Phone number: ";
-		getline(std::cin, phone_number);
+		getline(std::cin, m_phone_number);
 	}
 	while (!std::cin.eof() && !is_valid_phone_number());
  
 	std::cout << "Darkest secret: ";
-	getline(std::cin, darkest_secret);
-	rtrim(darkest_secret);
+	getline(std::cin, m_darkest_secret);
+	rtrim(m_darkest_secret);
 }
 
 /*
@@ -71,35 +71,35 @@ void    Contact::read_contact()
  */
 void    Contact::display_contact()
 {
-	std::cout << "First name: " << first_name << std::endl;
-	std::cout << "Last name: " << last_name << std::endl;
-	std::cout << "Nickname: " << nickname << std::endl;
-	std::cout << "Phone number: " << phone_number << std::endl;
-	std::cout << "Darkest secret: " << darkest_secret << std::endl;
+	std::cout << "First name: " << m_first_name << std::endl;
+	std::cout << "Last name: " << m_last_name << std::endl;
+	std::cout << "Nickname: " << m_nickname << std::endl;
+	std::cout << "Phone number: " << m_phone_number << std::endl;
+	std::cout << "Darkest secret: " << m_darkest_secret << std::endl;
 }
 
 std::string  Contact::get_first_name()
 {
-	return (first_name);
+	return (m_first_name);
 }
 
 std::string  Contact::get_last_name()
 {
-	return (last_name);
+	return (m_last_name);
 }
 
 std::string  Contact::get_nickname()
 {
-	return (nickname);
+	return (m_nickname);
 }
 
 std::string  Contact::get_phone_number()
 {
-	return (phone_number);
+	return (m_phone_number);
 }
 
 std::string  Contact::get_darkest_secret()
 {
-	return (darkest_secret);
+	return (m_darkest_secret);
 }
 

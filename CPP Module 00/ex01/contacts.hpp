@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contacts.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvintila <lvintila@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:20:36 by lvintila          #+#    #+#             */
-/*   Updated: 2022/09/21 20:26:45 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/16 12:59:30 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 class Contact
 {
 	private:
-		std::string first_name;
-		std::string last_name;
-		std::string nickname;
-		std::string phone_number;
-		std::string darkest_secret;
+		std::string m_first_name;
+		std::string m_last_name;
+		std::string m_nickname;
+		std::string m_phone_number;
+		std::string m_darkest_secret;
 
 		bool is_valid_phone_number();
 	public:

@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:55:06 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 13:32:09 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/16 13:30:32 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,18 @@ void	Account::makeDeposit(int deposit)
 	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";";
 	std::cout << "p_amount:" << Account::checkAmount() << ";";
-	std::cout << "deposit:" << deposit << ";";
-	this->_amount += deposit;
-	Account::_totalAmount += deposit;
-	std::cout << "amount:" << Account::checkAmount() << ";";
-	this->_nbDeposits++;
-	Account::_totalNbDeposits++;
-	std::cout << "nb_deposits:" << this->_nbDeposits << std::endl;
+/*	if (deposit < 0)
+		std::cout << "deposit:refused" << std::endl;
+	else
+	{*/
+		std::cout << "deposit:" << deposit << ";";
+		this->_amount += deposit;
+		Account::_totalAmount += deposit;
+		std::cout << "amount:" << Account::checkAmount() << ";";
+		this->_nbDeposits++;
+		Account::_totalNbDeposits++;
+		std::cout << "nb_deposits:" << this->_nbDeposits << std::endl;
+//	}
 }
 
 bool	Account::makeWithdrawal(int withdrawal)
@@ -85,6 +90,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	std::cout << "p_amount:" << Account::checkAmount() << ";";
 	if (withdrawal < 0 || Account::checkAmount() - withdrawal < 0)
 	{
+	//	std::cout << "withdrawal:refused" << std::endl;
 		return (false);
 	}
 	else

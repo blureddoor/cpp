@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvintila <lvintila@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:25:31 by lvintila          #+#    #+#             */
-/*   Updated: 2022/09/21 20:34:44 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/16 13:04:29 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
