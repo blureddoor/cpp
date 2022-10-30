@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:24:33 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/17 21:31:09 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/30 10:35:16 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,37 @@
 int Fixed::getRawBits( void ) const
 {
     std::cout << "getRawBits member function called" << std::endl;
-    return(this->m_w);
+    return(this->m_b);
 }
 
 void Fixed::setRawBits ( int const raw )
 {
-    std::cout << "setRawBits member function called" << std::endl;
-    this->m_w = raw;
+    //std::cout << "setRawBits member function called" << std::endl;
+    this->m_b = raw;
 }
 
 // Constructor
 Fixed::Fixed()
 {
-    this->m_w = 0;
+    this->m_b = 0;
     std::cout << "Default constructor called" << std::endl;
 }
 
 // Destructor
 Fixed::~Fixed()
 {
-    std::cout << "Desstructor called" << std::endl;
+    std::cout << "Destructor called" << std::endl;
+}
+
+Fixed::Fixed(Fixed const &src)
+{
+    std::cout << "Copy constructor called" << std::endl;
+    *this = src;
+}
+
+Fixed &Fixed::operator=(Fixed const &rhs)
+{
+    std::cout << "Assignation operator called" << std::endl;
+    setRawBits(rhs.getRawBits());
+    return (*this);
 }

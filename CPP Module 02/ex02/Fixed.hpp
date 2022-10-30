@@ -61,9 +61,8 @@ class   Fixed
          * ========
          * ex01 ===
          * ========
-         */
-
-        /*
+         *
+         *
          * Constructor that accept an consts int as a parameter and
          * convert it to a value of 8:
          */
@@ -79,6 +78,36 @@ class   Fixed
         float toFloat (void) const;
         int toInt (void) const;
 
+
+        /* 
+         * ========
+         * ex02 ===
+         * ========
+         */
+
+        int operator>(Fixed const & rhs) const;
+        int operator<(Fixed const & rhs) const;
+        int operator>=(Fixed const &rhs) const;
+        int operator<=(Fixed const & rhs) const;
+        int operator==(Fixed const & rhs)const;
+        int operator!=(Fixed const & rhs)const;
+
+        Fixed operator+(Fixed const & rhs)const;
+        Fixed operator-(Fixed const & rhs)const;
+        Fixed operator*(Fixed const & rhs)const;
+        Fixed operator/(Fixed const & rhs)const;
+
+        Fixed &operator++(void); /*  pre increment ++i */
+        Fixed &operator--(void); /* pre decrement --i */
+        Fixed operator++(int i); /* post increment i++ */ 
+        Fixed operator--(int i); /* post decrement i-- */
+
+        static const Fixed &min(const Fixed &a, const Fixed &b);
+        static const Fixed &max(const Fixed &a, const Fixed &b);
+        static Fixed &min(Fixed &a, Fixed &b);
+        static Fixed &max(Fixed &a, Fixed &b);
+
+        
 };
 
 std::ostream &operator<<(std::ostream &o, Fixed const &rhs);

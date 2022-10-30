@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:24:33 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/17 22:54:59 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/10/30 11:30:03 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,20 +83,21 @@ Fixed &Fixed::operator=(Fixed const &rhs)
 Fixed::Fixed(int num)
 {
     std::cout << "Int constructor called" << std::endl;
-    setRawBits(num << this->m_b);
+    setRawBits(num << this->m_w);
 }
 
 /*
  * Float Constructor
  * https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
- * Calculate x = floating_input * 2^(fractional_bits)
- * Round x to the nearest whole number (e.g. round(x))
- * Store the rounded x in an integer container
+ * To convert from  floating-point to fixed-point, we follow this algorithm:
+ * 1. Calculate x = floating_input * 2^(fractional_bits)
+ * 2. Round x to the nearest whole number (e.g. round(x))
+ * 3. Store the rounded x in an integer container
  */
-Fixed::Fixed(float numfloat)
+Fixed::Fixed(float num_float)
 {
     std::cout << "Float constructor called" << std::endl;
-    this->setRawBits((int)roundf(numfloat * (1 << this->m_b)));
+    this->setRawBits((int)roundf(num_float * (1 << this->m_w)));
 }
 
 /*
@@ -106,22 +107,25 @@ float Fixed::toFloat(void) const
 {
     float f;
 
-    f = (float)this->getRawBits() / (1 << this->m_b);
+    f = (float)this->getRawBits() / (1 << this->m_w);
     return (f);
 }
 
 /* fix >> FIXED_POINT */
 int Fixed::toInt (void) const
 {
-    return (this->getRawBits() >> this->m_b);
+    return (this->getRawBits() >> this->m_w);
 }
 
 /* Operator overload (not a member function) */
 std::ostream &operator<<(std::ostream &o, Fixed const &rhs)
 {
     o << rhs.toFloat();
-    std::cout <<std::endl << "RAW: " << rhs.getRawBits() << std::endl;
+ 
+/*    std::cout <<std::endl << "RAW: " << rhs.getRawBits() << std::endl;
+
     std::cout << std:: endl << "TOINT: " << rhs.toInt() << std::endl;
 	std::cout << std:: endl << "TOFLOAT: " << rhs.toFloat() << std::endl;
+*/
     return (o);
 }

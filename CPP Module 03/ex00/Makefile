@@ -1,11 +1,11 @@
-SRCS		=	Fixed.cpp\
+SRCS		=	ClapTrap.cpp\
 				main.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-NAME		=	fixed
+NAME		=	clap
 
-CXX			=	clang++
+CXX			=	c++
 
 CXXFLAGS	=	-Wall -Werror -Wextra
 
