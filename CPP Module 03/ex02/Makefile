@@ -1,5 +1,5 @@
-SRCS		=	ClapTrap.cpp\
-				main.cpp\
+SRCS		=	ClapTrap.cpp ScavTrap.cpp \
+				main.cpp \
 
 OBJS		=	$(SRCS:.cpp=.o)
 
