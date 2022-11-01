@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 12:32:38 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/01 11:50:07 by lvintila         ###   ########.fr       */
+/*   Created: 2022/11/01 11:53:02 by lvintila          #+#    #+#             */
+/*   Updated: 2022/11/01 12:42:43 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
- 
+
+ClapTrap::ClapTrap()
+{}
+
 ClapTrap::ClapTrap(const std::string name)
 {
     this->m_name = name;
@@ -19,23 +22,23 @@ ClapTrap::ClapTrap(const std::string name)
     this->m_energy_points = 10;
     this->m_max_energy_points = this->m_energy_points;
     this->m_attack_damage = 0;
-    std::cout << "Name Constructor called" << std::endl;
+    std::cout << "ClapTrap Name Constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src)
 {
     *this = src;
-    std::cout << "Copy Constructor called" << std::endl;
+    std::cout << "ClapTrap Copy Constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor Called" << std::endl;
+    std::cout << "ClapTrap Destructor Called" << std::endl;
 }
 
 ClapTrap & ClapTrap::operator=(ClapTrap const & rhs )
 {
-    std::cout << "Assignament operator called" << std::endl;
+    std::cout << "ClapTrap Assignament operator called" << std::endl;
     std::cout << rhs << std::endl;
     return (*this);
 }
@@ -55,12 +58,12 @@ void   ClapTrap::attack(std::string const & target)
 {
     std::cout << "Attacking ..." << std::endl;
     if (this->m_energy_points <= 0)
-        std::cout << "===> Bro .. I'm dead, impossible attack!! " << "\n"
+        std::cout << "Bro ... I'm dead, impossible attack!! " << "\n"
         << std::endl;
     else
         std::cout << "ClapTrap " << this->m_name << " attack " << target
-            << ", causing " << this->m_hit_points << " points of damage! "
-            << std::endl;
+            << ", causing " << this->m_hit_points
+            << " points of damage of his target! "<< std::endl;
 }
 
 void    ClapTrap::takeDamage(unsigned int amount)
@@ -79,7 +82,7 @@ void    ClapTrap::takeDamage(unsigned int amount)
         }
         else
             std::cout << "ClapTrap " << this->m_name << " took " << amount
-            << " hit points. Outch!!!... Now only got "
+            << " hit points. Outch!!!... Now only has "
             << this->m_energy_points << " energy points left" << std::endl;
         std::cout << std::endl;
     }
@@ -107,7 +110,7 @@ void    ClapTrap::beRepaired(unsigned int amount)
         }
     }
     std::cout << "ClapTrap " << this->m_name << " was just get repaired with "
-        << amount << " energy points. Now he's got " << this->m_energy_points
+        << amount << " energy points. Now he has " << this->m_energy_points
         << " Energy Points"<< std::endl;
     std::cout << std::endl;
 }

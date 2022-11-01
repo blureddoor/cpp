@@ -1,9 +1,9 @@
-SRCS		=	ClapTrap.cpp\
+SRCS		=	ClapTrap.cpp ScavTrap.cpp\
 				main.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-NAME		=	fixed
+NAME		=	scav
 
 CXX			=	c++
 
