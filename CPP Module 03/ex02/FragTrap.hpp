@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:54:32 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/01 14:03:17 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/02 21:26:05 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@
 class FragTrap : public ClapTrap
 {
     private:
+        FragTrap();
 
     public:
-        FragTrap();
         ~FragTrap();
         FragTrap(std::string const name);
         FragTrap(ClapTrap const & src);
 
-        FragTrap    & operator=(const ClapTrap &rhs);
+        FragTrap    & operator=(const FragTrap &rhs);
         void        highFivesGuys(void);
         
 };

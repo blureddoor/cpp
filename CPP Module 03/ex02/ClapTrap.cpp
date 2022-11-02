@@ -13,7 +13,9 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-{}
+{
+    std::cout << "ClapTrap Default Constructor Called" << std::endl;
+}
 
 ClapTrap::ClapTrap(const std::string name)
 {
@@ -56,7 +58,7 @@ const std::string	&ClapTrap::getName( void ) const
 
 void   ClapTrap::attack(std::string const & target)
 {
-    std::cout << "Attacking ..." << std::endl;
+    std::cout << "Attacking ...(from ClapTrap)" << std::endl;
     if (this->m_energy_points <= 0)
         std::cout << "Bro ... I'm dead, impossible attack!! " << "\n"
         << std::endl;
@@ -68,7 +70,7 @@ void   ClapTrap::attack(std::string const & target)
 
 void    ClapTrap::takeDamage(unsigned int amount)
 {
-    std::cout << "Receiving damage ..." << std::endl;
+    std::cout << "Receiving damage ...(from ClapTrap)" << std::endl;
     if (this->m_energy_points <= 0)
         std::cout << "Already dead can't get more damage!! " << "\n"
         << std::endl;
@@ -90,7 +92,7 @@ void    ClapTrap::takeDamage(unsigned int amount)
         
 void    ClapTrap::beRepaired(unsigned int amount)
 {
-    std::cout << "Repairing ..." << std::endl;
+    std::cout << "Repairing ...(from ClapTrap)" << std::endl;
     if (this->m_energy_points <= 0)
     {
         std::cout << this->m_name << " is already dead, imposible repair"

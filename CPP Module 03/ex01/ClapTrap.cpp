@@ -13,7 +13,9 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-{}
+{
+    std::cout << "ClapTrap Default Constructor Called" << std::endl;
+}
 
 ClapTrap::ClapTrap(const std::string name)
 {

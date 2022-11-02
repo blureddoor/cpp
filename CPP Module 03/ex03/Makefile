@@ -1,9 +1,9 @@
-SRCS		=	ClapTrap.cpp\
+SRCS		=	ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp\
 				main.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-NAME		=	fixed
+NAME		=	diamond
 
 CXX			=	c++
 

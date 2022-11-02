@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:50:05 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/02 20:48:26 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/02 21:26:34 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ScavTrap : public ClapTrap
 {
-    private:
+    protected:
         ScavTrap();
     public:
         ScavTrap(std::string const name);
