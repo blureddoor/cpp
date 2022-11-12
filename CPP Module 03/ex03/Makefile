@@ -7,7 +7,7 @@ NAME		=	diamond
 
 CXX			=	c++
 
-CXXFLAGS	=	-Wall -Werror -Wextra
+CXXFLAGS	=	-Wall -Werror -Wextra  -Wshadow -Wno-shadow
 
 RM			=	rm -f
 

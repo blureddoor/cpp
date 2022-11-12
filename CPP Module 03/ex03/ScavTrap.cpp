@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:54:34 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/02 20:48:25 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/12 13:25:21 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ ScavTrap::ScavTrap(const std::string name)
     this->m_max_energy_points = this->m_energy_points;
     this->m_attack_damage = 20;
     std::cout << "ScavTrap Name Constructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap()
+{
+    std::cout << "ScavTrap Default Constructor called" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
@@ -39,7 +44,7 @@ void    ScavTrap::guardGate()
     std::cout << "ScavTrap " << this->m_name << " guardGate" << std::endl;
 }
 
-void    ScavTrap::attack(std::string const & target)
+void    ScavTrap::attack(std::string const & target) const
 {
     std::cout << "Attacking (from ScavTrap) ..." << std::endl;
     if (this->m_energy_points <= 0)

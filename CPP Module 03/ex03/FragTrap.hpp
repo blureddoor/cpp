@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:54:32 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/02 21:26:46 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/12 12:47:46 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "ClapTrap.hpp"
 # include "ScavTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
     protected:
         FragTrap();

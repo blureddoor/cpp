@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:54:05 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/02 20:48:21 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/12 13:39:32 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ FragTrap::FragTrap(const std::string name)
     this->m_max_energy_points = this->m_energy_points;
     this->m_attack_damage = 30;
     std::cout << "FragTrap Name Constructor called" << std::endl;
+}
+FragTrap::FragTrap()
+{
+    std::cout << "FragTrap Default Constructor called" << std::endl;
 }
 
 FragTrap::~FragTrap()
