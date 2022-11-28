@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 10:14:38 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/16 20:45:48 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/16 20:45:50 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Animal::~Animal()
 Animal & Animal::operator=(Animal const & ref )
 {
     std::cout << "Assignament operator called" << std::endl;
-    this->type = ref.getType();
+    std::cout << ref << std::endl;
     return (*this);
 }
 
@@ -49,3 +49,4 @@ std::ostream & operator<<( std::ostream & o, const Animal & instance)
 
 void    Animal::makeSound() const
 {}
+

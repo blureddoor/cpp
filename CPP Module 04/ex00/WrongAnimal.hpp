@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 12:32:10 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/16 20:44:12 by lvintila         ###   ########.fr       */
+/*   Created: 2022/11/13 12:50:31 by lvintila          #+#    #+#             */
+/*   Updated: 2022/11/13 13:08:38 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 # include <iostream>
-# include "Brain.hpp"
 
-class Animal
+class WrongAnimal
 {
     protected:
         std::string type;
     
     public:
-        Animal();
-        Animal(Animal const & src);
-        virtual ~Animal();
+        WrongAnimal();
+        WrongAnimal(WrongAnimal const & src);
+        ~WrongAnimal();
         
-        virtual Animal      & operator=(const Animal &ref);
+        WrongAnimal              & operator=(const WrongAnimal &ref);
         const std::string   & getType (void) const;
-        virtual void        makeSound() const;
-        virtual Brain       *getBrain() const = 0;
+        void        makeSound() const;
 };
 
-std::ostream & operator<<( std::ostream &o, const Animal &instance );
-
+std::ostream & operator<<( std::ostream &o, const WrongAnimal &instance );
 #endif
-
