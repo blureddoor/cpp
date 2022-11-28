@@ -6,12 +6,13 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 21:07:21 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/16 21:51:06 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:59:52 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
+/*
 AMateria::AMateria()
 {
     std::cout << "AMateria Constructor called" << std::endl;
@@ -34,15 +35,13 @@ AMateria & AMateria::operator=(AMateria const & ref) // Linea Leo
     this->type = ref.getType();
     return (*this);
 }
-
+*/
 AMateria::AMateria(std::string const & type)
-{ 
+{
+    std::cout << "String Constructor AMateria called" << std::endl;
 }
+
 const std::string & AMateria::getType() const //Returns the materia type
 {
-    
-}
-const AMateria* clone()
-{
-    
+    return (this->m_type);   
 }

@@ -1,13 +1,13 @@
-SRCS		=	ClapTrap.cpp\
+SRCS		=	AMateria.cpp Character.cpp MateriaSource.cpp \
 				main.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-NAME		=	clap
+NAME		=	ice
 
-CXX			=	c++
+CXX			=	clang++
 
-CXXFLAGS	=	-Wall -Werror -Wextra
+CXXFLAGS	=	-W -Wall -Werror
 
 RM			=	rm -f
 
