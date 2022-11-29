@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contacts.hpp                                       :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:20:36 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 12:59:30 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 19:59:29 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 
-#ifndef CONTACTS_HPP
-#define CONTACTS_HPP
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 class Contact
 {

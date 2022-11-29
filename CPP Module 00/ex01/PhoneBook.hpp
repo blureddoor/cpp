@@ -6,20 +6,20 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 22:01:35 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 12:40:23 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 20:05:02 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-#ifndef DUMF_HPP
-#define DUMF_HPP
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-#include "contacts.hpp"
+#include "Contact.hpp"
 
 #define MAX_CONTACTS 8
 
-class Agenda
+class PhoneBook
 {
 	private:
 		Contact contacts[MAX_CONTACTS];
@@ -30,7 +30,7 @@ class Agenda
 		void search();
 		void rec_and_del_first();
 	public:
-		Agenda();
+		PhoneBook();
 		void dumf_loop();
 };
 

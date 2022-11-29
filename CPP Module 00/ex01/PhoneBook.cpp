@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dumf.cpp                                           :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:55:06 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 12:40:21 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 20:08:23 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dumf.hpp"
+#include "PhoneBook.hpp"
 #include "utils.hpp"
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <cstdlib>
 
-
-Agenda::Agenda()
+PhoneBook::PhoneBook()
 {
 	in_use = 0;
 }
@@ -26,7 +25,8 @@ Agenda::Agenda()
 /*
  * This method adds a new contact to the array, after checking if its full.
  */
-void    Agenda::add()
+
+void    PhoneBook::add()
 {
 	std::string input;
 
@@ -56,12 +56,12 @@ void    Agenda::add()
 		in_use++;
 }
 
-
 /*
  * This method displays the table for the SEARCH functionality with a
  * resume of the stored contacts.
  */
-void    Agenda::display_search_table()
+
+void    PhoneBook::display_search_table()
 {
 	std::cout << "---------------------------------------------" << std::endl;
 	std::cout << "|" << std::setw(10) << "index" << "|" << std::setw(10)
@@ -86,12 +86,13 @@ void    Agenda::display_search_table()
 	}
 }
 
-
 /*
  * This method shows the user a table with the stored contacts and then it
  * prompts to select one to display its full data.
  */
-void    Agenda::search()
+
+
+void    PhoneBook::search()
 {
 	std::string input;
 	bool valid;
@@ -119,12 +120,12 @@ void    Agenda::search()
 	contacts[atoi(input.c_str())].display_contact();
 }
 
-
 /*
  * This method moves all the contacts one position down overwriting
  * the first element.
  */
-void    Agenda::rec_and_del_first()
+
+void    PhoneBook::rec_and_del_first()
 {
 	for (int i = 1; i < MAX_CONTACTS; i++)
 		contacts[i - 1] = contacts[i];
@@ -133,7 +134,8 @@ void    Agenda::rec_and_del_first()
 /*
  * This method keeps asking the user for commands until an EXIT is introduced.
  */
-void    Agenda::dumf_loop()
+
+void    PhoneBook::dumf_loop()
 {
 	std::string input;
 	bool keep;

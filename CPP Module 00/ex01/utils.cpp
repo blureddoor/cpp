@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:01:05 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 12:40:28 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 20:09:20 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
  * This function removes the characters at the end of str that are contained in
  * the chars string.
  */
+
 void    rtrim(std::string &str, const char *chars)
 {
 	long long i;
@@ -33,6 +34,7 @@ void    rtrim(std::string &str, const char *chars)
  * This function cuts the passed string if its longer than max_len and
  * replaces the last character with a dot.
  */
+
 std::string  cut_and_dot(std::string str, size_t max_len)
 {
 	if (str.length() <= max_len)
@@ -45,6 +47,7 @@ std::string  cut_and_dot(std::string str, size_t max_len)
  * This function returns true if the passed string is only composed by
  * digits.
  */
+
 bool    is_natural_number(std::string str)
 {
 	for (size_t i = 0; i < str.length(); i++)

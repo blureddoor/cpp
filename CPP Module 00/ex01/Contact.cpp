@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contacts.cpp                                       :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:01:05 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 13:01:40 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 19:59:38 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contacts.hpp"
+#include "Contact.hpp"
 #include "utils.hpp"
 #include <iostream>
 #include <cstring>

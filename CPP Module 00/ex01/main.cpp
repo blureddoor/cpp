@@ -6,15 +6,15 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:55:06 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 12:40:24 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 20:05:48 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dumf.hpp"
+#include "PhoneBook.hpp"
 
 int main()
 {
-	Agenda agenda;
+	PhoneBook agenda;
 
 	agenda.dumf_loop();
 	return (0);
