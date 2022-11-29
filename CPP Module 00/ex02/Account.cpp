@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:55:06 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 13:32:09 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 21:33:12 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,12 @@ Account::Account (int initial_deposit) : _accountIndex(Account::_nbAccounts),
 	std::cout << "amount:" << Account::checkAmount() << ";created" << std::endl;
 }
 
-Account::~Account (void) {
+Account::~Account (void)
+{
 	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";";
 	std::cout << "amount:" << Account::checkAmount() << ";closed" << std::endl;
-	Account::_nbAccounts--;
+	//Account::_nbAccounts--;
 	Account::_totalAmount -= Account::checkAmount();
 }
 
@@ -85,6 +86,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	std::cout << "p_amount:" << Account::checkAmount() << ";";
 	if (withdrawal < 0 || Account::checkAmount() - withdrawal < 0)
 	{
+		std::cout << "withdrawal:refused" << std::endl;
 		return (false);
 	}
 	else

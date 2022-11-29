@@ -11,9 +11,7 @@
 #include <algorithm>
 #include <functional>
 #include "Account.hpp"
-#include <string>
-#include <iterator>
-#include <iostream>
+
 
 int		main( void ) {
 
