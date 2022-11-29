@@ -1,11 +1,11 @@
-SRCS		=	AMateria.cpp Character.cpp MateriaSource.cpp \
+SRCS		=	AMateria.cpp Character.cpp MateriaSource.cpp Ice.cpp Cure.cpp\
 				main.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
 NAME		=	ice
 
-CXX			=	clang++
+CXX			=	c++
 
 CXXFLAGS	=	-W -Wall -Werror
 

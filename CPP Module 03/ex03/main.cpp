@@ -6,9 +6,12 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:50:27 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/12 13:29:18 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/13 10:07:44 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* revisar por que la función "attack" del diamondTrap ccausa -332423832482
+points of dammage a su adversario */
 
 #include "DiamondTrap.hpp"
 

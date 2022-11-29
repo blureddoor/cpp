@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ice.cpp                                            :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:57:38 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/28 22:59:28 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 19:51:53 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice(void): AMateria("ice") {}
-Ice::Ice(std::string const & type): AMateria("ice")
+Ice::Ice(void): AMateria("ice")
+{}
+
+Ice::Ice(std::string const & type): AMateria("Ice")
 {
 	(void)type;
 }
 
-Ice::Ice(Ice const & cpy): AMateria(cpy) {}
-Ice::~Ice(void) {}
+Ice::Ice(Ice const & cpy): AMateria(cpy)
+{}
+
+Ice::~Ice(void)
+{}
 
 Ice & Ice::operator=(Ice const & rhs)
 {
@@ -29,9 +34,9 @@ Ice & Ice::operator=(Ice const & rhs)
 
 Ice *	Ice::clone(void) const
 {
-	Ice *	newice = new Ice("ice");
+	Ice * new_ice = new Ice("ice");
 
-	return newice;
+	return new_ice;
 }
 
 void	Ice::use(ICharacter& target)

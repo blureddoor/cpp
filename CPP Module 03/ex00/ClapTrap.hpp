@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:32:10 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/01 11:49:08 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/13 10:21:40 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class ClapTrap
         int         m_attack_damage;
     
     public:
+        ClapTrap();
         ClapTrap(std::string const name);
         ClapTrap(ClapTrap const & src);
         ~ClapTrap();

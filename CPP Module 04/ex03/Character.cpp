@@ -10,7 +10,7 @@ Character::Character(void)
 	m_number_equipped = 0;
 	for (int i = 0; i < Character::m_inventory_size; i++)
 		this->m_inventory[i] = NULL;
-	std::cout << "Default Character Constructor called" << std::endl;
+//	std::cout << "Default Character Constructor called" << std::endl;
 	return;
 }
 
@@ -18,14 +18,14 @@ Character::Character( const std::string &name )
 {
 	*this = Character();
 	this->m_name = name;
-	std::cout << "Name constructor for Character called" << std::endl;
+//	std::cout << "Name constructor for Character called" << std::endl;
 	return;
 }
 
 
 Character::Character( Character const & src )
 {
-	std::cout << "Copy constructor for Character called" << std::endl;
+//	std::cout << "Copy constructor for Character called" << std::endl;
 	*this = src;
 	return;
 }
@@ -37,7 +37,7 @@ Character::Character( Character const & src )
 
 Character::~Character()
 {
-	std::cout << "Destructor for Character called" << std::endl;
+//	std::cout << "Destructor for Character called" << std::endl;
 	return;
 }
 
@@ -58,7 +58,7 @@ Character &				Character::operator=( Character const & rhs )
 			this->m_number_equipped++;
 	}
 	this->m_name = rhs.getName();
-	std::cout << "Assignement operator for Character called" << std::endl;
+//	std::cout << "Assignement operator for Character called" << std::endl;
 	return *this;
 }
 
@@ -77,7 +77,7 @@ void				Character::equip(AMateria* m)
 	{
 		this->m_inventory[this->m_number_equipped] = m;
 		this->m_number_equipped++;
-		std::cout << "Equipped a " << m->getType() << std::endl;
+	//	std::cout << "Equipped a " << m->getType() << std::endl;
 	}
 	else
 		std::cout << "Couldn't equip a " << m->getType()

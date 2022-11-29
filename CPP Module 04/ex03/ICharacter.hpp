@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 21:12:05 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/28 22:55:14 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 19:18:46 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,7 @@ class AMateria;
 
 class ICharacter
 {
-    public:
-//      ICharacter(); // linea Leo
-//      ICharacter(ICharacter const & src); // Linea Leo
-//      virtual ICharacter & operator=(const ICharacter & ref); // Linea Leo
-        
+    public:     
         virtual ~ICharacter() {}
         virtual std::string const   & getName() const = 0;
         virtual void                equip(AMateria* m) = 0;

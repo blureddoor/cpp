@@ -6,12 +6,17 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:32:38 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/01 11:50:07 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/13 10:22:05 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
- 
+
+ClapTrap::ClapTrap()
+{
+    std::cout << "ClapTrap Default Constructor Called" << std::endl;
+}
+
 ClapTrap::ClapTrap(const std::string name)
 {
     this->m_name = name;

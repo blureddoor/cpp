@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:55:06 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/28 22:55:07 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 19:41:14 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,16 @@
 
 MateriaSource::MateriaSource( void )
 {
-	int m_number_learned = 0;
 	int m_materias[4];
 	for (int i = 0; i < m_materias[i]; i++)
 		this->m_materias[i] = NULL;
-	std::cout << "Default constructor for MateriaSource called" << std::endl;
+//	std::cout << "Default constructor for MateriaSource called" << std::endl;
 	return;
 }
 
 MateriaSource::MateriaSource( MateriaSource const & src )
 {
-	std::cout << "Copy constructor for IMateriaSource called" << std::endl;
+//	std::cout << "Copy constructor for IMateriaSource called" << std::endl;
 	*this = src;
 	return;
 }
@@ -45,7 +44,7 @@ MateriaSource::~MateriaSource( void )
 		if (this->m_materias[i])
 			delete this->m_materias[i];
 	}
-	std::cout << "Destructor for MateriaSource called" << std::endl;
+//	std::cout << "Destructor for MateriaSource called" << std::endl;
 }
 
 /*

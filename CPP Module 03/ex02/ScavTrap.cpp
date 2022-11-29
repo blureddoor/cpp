@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:54:34 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/02 20:48:25 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/12 13:05:36 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void    ScavTrap::guardGate()
     std::cout << "ScavTrap " << this->m_name << " guardGate" << std::endl;
 }
 
-void    ScavTrap::attack(std::string const & target)
+void    ScavTrap::attack(std::string const & target) const
 {
     std::cout << "Attacking (from ScavTrap) ..." << std::endl;
     if (this->m_energy_points <= 0)

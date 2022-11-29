@@ -2,7 +2,7 @@
 # define CHARACTER_HPP
 
 
-# include "Icharacter.hpp"
+# include "ICharacter.hpp"
 
 class Character : public ICharacter
 {

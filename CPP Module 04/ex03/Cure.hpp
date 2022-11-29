@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:58:58 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/28 22:59:00 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/11/29 19:33:45 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Cure: public AMateria
 	public:
 		Cure(void);
 		Cure(std::string const & type);
-		Cure(Cure const & cpy);
+		Cure(Cure const & src);
 		virtual ~Cure(void);
 		Cure &	operator=(Cure const & rhs);
 
