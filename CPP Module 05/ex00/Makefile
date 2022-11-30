@@ -1,9 +1,9 @@
-SRCS		=	Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp\
+SRCS		=	Bureaucrat.cpp\
 				main.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-NAME		=	animal
+NAME		=	Bureaucrat
 
 CXX			=	c++
 
