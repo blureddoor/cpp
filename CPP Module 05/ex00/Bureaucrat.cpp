@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 19:03:20 by lvintila          #+#    #+#             */
-/*   Updated: 2022/12/10 12:45:47 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/12/11 09:14:48 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,12 +161,18 @@ void	Bureaucrat::decGrade(int grade)
 	*/
 }
 
-
-
-
 /*
-** --------------------------------- ACCESSOR ---------------------------------
+** --------------------------------- EXCEPTION CLASS ---------------------------------
 */
 
+const char * Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "GradeTooHighEception: There is no highest grade, 1 is the best";
+}
+
+const char * Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "GradeTooLowEception: Sorry, this is embarassing, the lowest grade is 150";
+}
 
 /* ************************************************************************** */
