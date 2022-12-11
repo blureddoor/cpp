@@ -18,6 +18,9 @@ class ShrubberyCreationForm : public Form
 		ShrubberyCreationForm &		operator=( ShrubberyCreationForm const & rhs );
 
 		virtual void	execute(Bureaucrat const &executor) const;
+		const std::string	& getTarget( void ) const;
+	private:
+		std::string	m_target;
 };
 
 std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & instance );

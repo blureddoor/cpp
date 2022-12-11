@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:50:56 by lvintila          #+#    #+#             */
-/*   Updated: 2022/12/11 09:29:32 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/12/11 11:40:18 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,12 +128,12 @@ int	main(void)
 	}
 	std::cout << std::endl;
 
-
+std::cout << "=============== "<< std::endl;
 	try
 	{
 		Bureaucrat	leo = Bureaucrat("Leo", 111);
 		Form		f("Form04", 140, 150);
-		Form		t("Form04", 100, 120);
+		Form		t("Form04", 112, 120);
 		try
 		{
 			f.checkExecForm(leo);

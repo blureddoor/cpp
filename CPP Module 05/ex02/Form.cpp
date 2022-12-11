@@ -5,9 +5,9 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Form::Form(const std::string &name, int grade_to_exec, int grade_to_sign)
-	:m_name(name), m_signed(false), m_grade_to_exec(grade_to_exec),
-		m_grade_to_sign(grade_to_sign)
+Form::Form(const std::string &name, int grade_to_sign, int grade_to_exec)
+	:m_name(name), m_signed(false), m_grade_to_sign(grade_to_sign),
+		m_grade_to_exec(grade_to_exec)
 {
 	if (this->m_grade_to_exec < 1
 			|| this->m_grade_to_sign < 1)
@@ -19,7 +19,7 @@ Form::Form(const std::string &name, int grade_to_exec, int grade_to_sign)
 
 Form::Form( const Form & src )
 	:m_name(src.getName()), m_signed(src.isSigned()),
-		m_grade_to_exec(src.getExecGrade()), m_grade_to_sign(src.getSignGrade())
+		m_grade_to_sign(src.getSignGrade()),m_grade_to_exec(src.getExecGrade())
 {
 	*this = src;
 }
@@ -62,23 +62,15 @@ std::ostream &			operator<<( std::ostream & o, Form const & instance )
 
 /*
 ** --------------------------------- METHODS ----------------------------------
-		const std::string	&getName (void) const;
-		int					getSignGrade(void) const;
-		int					getExecGrade(void) const;
-		bool				isSigned(void) const;
-
-
-		void				incGrade(int grade);
-		void				decGrade(int grade);
-
-		bool				beSigned(const Bureaucrat &bureaucrat);
 */
 
 void	Form::checkExecForm(const Bureaucrat &bureaucrat) const
 {
-	if (this->m_signed == true
-			|| bureaucrat.getGrade() > this->m_grade_to_exec)
+	std::cout << " ... checking Exec Form: " << this->m_name << std::endl;
+	if (!this->m_signed || bureaucrat.getGrade() > this->m_grade_to_exec)
 		throw Form::ExecFormForbiddenException();
+	else if (bureaucrat.getGrade() > this->m_grade_to_sign)
+		throw Form::GradeTooLowException();
 }
 
 const	std::string & Form::getName (void) const

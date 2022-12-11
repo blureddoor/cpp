@@ -6,14 +6,16 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:50:56 by lvintila          #+#    #+#             */
-/*   Updated: 2022/12/11 09:29:32 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/12/11 14:13:24 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
-/*
+
 int	main( void )
 {
     int amount_1 = 100;
@@ -51,7 +53,14 @@ int	main( void )
 
 */
 
+
+/*
+=================
+
 #include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int	main(void)
 {
@@ -180,6 +189,109 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+
+	Form			*form = NULL;
+	Bureaucrat		bob("bob", 1);
+	Bureaucrat		phil("phil", 40);
+	Bureaucrat		luc("luc", 150);
+	try
+	{
+		form = new ShrubberyCreationForm("28C");
+		form->beSigned(bob);
+		form->checkExecForm(phil);
+		form->checkExecForm(luc);
+		delete form;
+		form = NULL;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return 0;
+}
+*/
+
+
+#include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+
+int	main(void)
+{
+	Form			*form = NULL;
+	Bureaucrat		bob("bob", 1);
+	Bureaucrat		phil("phil", 40);
+	Bureaucrat		luc("luc", 150);
+
+	try
+	{
+		form = new PresidentialPardonForm("28Z");
+		form->checkExecForm(bob);
+	//	delete form;
+	//	form = NULL;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+        std::cout << bob << std::endl;	
+		std::cout << form << std::endl;
+		bob.signForm(*form);
+		std::cout << form << std::endl;
+	try
+	{
+		form = new PresidentialPardonForm("28A");
+		form->beSigned(bob);
+		form->checkExecForm(bob);
+		bob.execForm(*form);
+	//	delete form;
+	//	form = NULL;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+
+	try
+	{
+		form = new RobotomyRequestForm("28B");
+		form->beSigned(bob);
+		form->checkExecForm(phil);
+		form->checkExecForm(phil);
+		form->checkExecForm(phil);
+		form->checkExecForm(phil);
+		form->checkExecForm(phil);
+		form->checkExecForm(phil);
+		form->checkExecForm(phil);
+		form->checkExecForm(phil);
+		form->checkExecForm(phil);
+	//	delete form;
+	//	form = NULL;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+
+	try
+	{
+		form = new ShrubberyCreationForm("28C");
+		form->beSigned(bob);
+		form->checkExecForm(phil);
+		form->checkExecForm(luc);
+	//	delete form;
+	//	form = NULL;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "------- Breaking Point -------" << std::endl;
+
+	
 
 	return 0;
 }

@@ -4,7 +4,7 @@ SRCS		=	Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-NAME		=	Form
+NAME		=	SRP
 
 CXX			=	c++
 

@@ -11,7 +11,7 @@ class Form
 
 	public:
 
-		Form( const std::string &name, int grade_to_exec, int grade_to_sign);
+		Form( const std::string &name, int grade_to_sign, int grade_to_exec);
 		Form( Form const & src );
 		~Form();
 
@@ -37,7 +37,7 @@ class Form
 				virtual const char* what() const throw();
 		};
 
-		class ExecFormForbiddenException
+		class ExecFormForbiddenException : public std::exception
 		{
 			public:
 				virtual const char* what() const throw();
@@ -47,8 +47,8 @@ class Form
 	private:
 		const std::string	m_name;
 		bool				m_signed;
-		const int			m_grade_to_exec;
 		const int			m_grade_to_sign;
+		const int			m_grade_to_exec;
 		Form(void);
 
 };
