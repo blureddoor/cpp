@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:50:56 by lvintila          #+#    #+#             */
-/*   Updated: 2022/12/15 20:16:36 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/12/15 21:39:22 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,12 +211,14 @@ int	main(void)
 }
 */
 
+/*
+=============================================
 
 #include "Bureaucrat.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
-
+#include "Intern.hpp"
 
 int	main(void)
 {
@@ -292,5 +294,38 @@ int	main(void)
 	}
 	std::cout << "------- Breaking Point -------" << std::endl;
 
-	return 0;
+}
+
+=============================================
+*/
+
+
+#include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
+
+int	main(void)
+{
+	Intern		usefulIdiot;
+	Bureaucrat	paul("Paul", 3);
+	Form		*form;
+
+	std::cout << "------- Breaking Point -------" << std::endl;
+	form = usefulIdiot.makeForm("this one doesn't exist", "Justin");
+	if (form)
+		delete form;
+	form = usefulIdiot.makeForm("presidential pardon", "Maynard");
+
+	form = usefulIdiot.makeForm("shrubbery creation", "Danny");
+
+	form = usefulIdiot.makeForm("robotomy request", "Adam");
+	form->beSigned(paul);
+	form->checkExecForm(paul);
+
+
+//	delete *(&form);
+//	system("leaks Intern");
+		return (0);
 }
