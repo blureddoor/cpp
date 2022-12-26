@@ -2,9 +2,9 @@ SRCS		=	main.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-NAME		=	array
+NAME		=	span
 
-CXX			=	clang++
+CXX			=	c++
 
 CXXFLAGS	=	-Wall -Werror -Wextra
 

@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 12:58:18 by lvintila          #+#    #+#             */
-/*   Updated: 2022/12/24 13:03:24 by lvintila         ###   ########.fr       */
+/*   Updated: 2022/12/26 11:11:07 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 #include "iter.hpp"
 
 template<typename T>
-void	iter(T *array, int arraySize, void (*fctToExecute)(const T &))
+void	iter(T *array, int arraySize, void (*funcExec)(const T &))
 {
 	for (int i = 0; i < arraySize; i++)
-		fctToExecute(array[i]);
+		funcExec(array[i]);
 }
 
 template<typename T>
