@@ -1,4 +1,4 @@
-SRCS		=	main.cpp\
+SRCS		=	span.cpp main.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
