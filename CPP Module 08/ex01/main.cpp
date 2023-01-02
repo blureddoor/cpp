@@ -20,14 +20,17 @@ int main()
 {
 	Span sp = Span(5);
 
-	sp.addNumber(5);
+	sp.addNumber(1);
+	sp.addNumber(6);
+	sp.addNumber(34);
+	sp.addNumber(99);
+	sp.addNumber(127);
+	sp.addNumber(173);
+	sp.addNumber(533);
 
 
-	
-	std::cout << "shortest: " << std::endl;
-	std::cout << sp.shortestSpan() << std::endl;
-    std::cout << "longest:" << std::endl;
-	std::cout << sp.longestSpan() << std::endl;
+	std::cout << "shortest span: " << sp.shortestSpan() << std::endl;
+    std::cout << "longest span:" << sp.longestSpan() << std::endl;
     std::cout << std::endl;
     sp.printContent();
     
@@ -36,12 +39,10 @@ int main()
 
 	srand(time(NULL));
 	for (int i = 0; i < 200; i++)
-		sp1.addNumber(rand() % 199);
+		sp1.addNumber(rand() %200);
   
-    std::cout << "shortest: " << std::endl;  
-	std::cout << sp1.shortestSpan() << std::endl;
-    std::cout << "longest:" << std::endl;
-	std::cout << sp1.longestSpan() << std::endl;
+    std::cout << "shortest span: " << sp1.shortestSpan() << std::endl;
+    std::cout << "longest span:" << sp1.longestSpan() << std::endl;
     std::cout << std::endl;
     sp1.printContent();
     

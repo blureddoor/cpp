@@ -69,44 +69,58 @@ std::ostream &			operator<<( std::ostream & o, Span const & instance )
 
 void Span::addNumber(int numAdded)
 {
+	try
+	{
+		/* code */
 		if (m_vector.size() < m_vector.capacity())
-		{
 			this->m_vector.push_back(numAdded);		
-			std::cout << " added." << std::endl;
-		}
 		else
 			throw Span::SpanOverSizeException();
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
 }
 
 unsigned int	Span::shortestSpan()
 {
-	sort(m_vector.begin(), m_vector.end());
-	if (m_vector.empty() == true || m_vector.size() == 1)
-	{	
-		std::cout << " from shortestSpan." << std::endl;
-		throw Span::NoSpanException();
-		return (0);
-	}
-	else
+	try
 	{
-		return (this->m_vector.at(1) - this->m_vector.at(0));
+		/* code */
+		sort(m_vector.begin(), m_vector.end());
+		if (m_vector.empty() == true || m_vector.size() == 1)	
+			throw Span::NoSpanException();
+		else
+			return (this->m_vector.at(1) - this->m_vector.at(0));
+
 	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	return (0);
 }
 
 unsigned int Span::longestSpan()
 {	
-	if (m_vector.empty() == true || m_vector.size() == 1)
+	sort(m_vector.begin(), m_vector.end());
+	
+	try
 	{
-		std::cout << " from longestSpan." << std::endl;
-		throw Span::NoSpanException();
-		return (0);
+		/* code */
+		if (m_vector.empty() == true || m_vector.size() == 1)
+			throw Span::NoSpanException();
+		else
+			return (this->m_vector.at(this->m_vector.size() - 1)
+				- this->m_vector.at(0));
 	}
-	else
+	catch(const std::exception& e)
 	{
-		sort(m_vector.begin(), m_vector.end());
-		return (this->m_vector.at(this->m_vector.size() - 1)
-			- this->m_vector.at(0));
+		std::cerr << e.what() << '\n';
 	}
+	return(0);
 }
 
 void Span::printContent(void)
@@ -117,7 +131,7 @@ void Span::printContent(void)
 	std::vector<int>::iterator it = this->m_vector.begin();
 
 	for (;it != this->m_vector.end(); ++it)
-		std::cout << *it << ", ";
+		std::cout << *it << " ";
 	std::cout << std::endl;
 }
 
@@ -131,7 +145,7 @@ void Span::printContent(void)
 
 const char * Span::SpanOverSizeException::what() const throw()
 {
-	return "Exception: Span overSize";
+	return "Exception: Span overSize. You can't add more elements than capacity";
 }
 const char * Span::NoSpanException::what() const throw()
 {

@@ -25,7 +25,7 @@ class Span
 		Span();
 		Span(unsigned int size);
 		Span( Span const & src );
-		~Span();
+		virtual~Span();
 
 		void	addNumber(int numAdded);
 
