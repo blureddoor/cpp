@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:31:39 by lvintila          #+#    #+#             */
-/*   Updated: 2022/12/26 11:14:56 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:56:44 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ class Array
 
         Array<T>	&operator=( Array const & rhs) 
         {
-            m_n = rhs._n;
+            m_n = rhs.m_n;
             delete m_array;
-            m_array = new T [rhs._n];
+            m_array = new T [rhs.m_n];
             for (unsigned int i = 0; i < m_n; i++)
                 m_array[i] = rhs.m_array[i];
             return *this;

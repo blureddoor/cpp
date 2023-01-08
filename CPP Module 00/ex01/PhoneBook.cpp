@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:55:06 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/29 20:08:23 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/08 13:29:10 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 #include "utils.hpp"
 #include <iostream>
 #include <iomanip>
-#include <string>
-#include <cstdlib>
+
 
 PhoneBook::PhoneBook()
 {
-	in_use = 0;
+	m_capacity = 0;
 }
 
 /*
@@ -30,7 +29,7 @@ void    PhoneBook::add()
 {
 	std::string input;
 
-	if (in_use == MAX_CONTACTS)
+	if (m_capacity == MAX_CONTACTS)
 	{
 		std::cout << "The limit of " << MAX_CONTACTS
             << " contacts has been reached";
@@ -43,17 +42,18 @@ void    PhoneBook::add()
             rtrim(input);
 		}
 		while (input.compare("y") != 0 && input.compare("n") != 0);
+		
 		if (input.compare("y") == 0)
 		{
-		rec_and_del_first();
-			in_use--;
+			rec_and_del_first();
+			m_capacity--;
 		}
 		else
 			return;
 	}
-	contacts[in_use].read_contact();
-	if (in_use < MAX_CONTACTS)
-		in_use++;
+	contacts[m_capacity].read_contact();
+	if (m_capacity < MAX_CONTACTS)
+		m_capacity++;
 }
 
 /*
@@ -71,7 +71,7 @@ void    PhoneBook::display_search_table()
 	std::cout << "|" << std::endl;
 	std::cout << "---------------------------------------------" << std::endl;
 
-	for (int i = 0; i < in_use; i++)
+	for (int i = 0; i < m_capacity; i++)
 	{
 		std::cout << "|" << std::setw(10) << i << "|";
 		std::cout << std::setw(10) << cut_and_dot(contacts[i].get_first_name()
@@ -95,9 +95,9 @@ void    PhoneBook::display_search_table()
 void    PhoneBook::search()
 {
 	std::string input;
-	bool valid;
+	bool term;
 
-	if (in_use == 0)
+	if (m_capacity == 0)
 	{
 		std::cout << "No contacts stored yet" << std::endl;
 		return;
@@ -105,15 +105,15 @@ void    PhoneBook::search()
 	
 	display_search_table();
 
-	valid = false;
-	while (!valid)
+	term = false;
+	while (!term)
 	{
 		std::cout << "Index > ";
 		getline(std::cin, input);
 		rtrim(input);
 
-		if (is_natural_number(input) && atoi(input.c_str()) < in_use)
-			valid = true;
+		if (is_natural_number(input) && atoi(input.c_str()) < m_capacity)
+			term = true;
 		else
 			std::cout << input << ": invalid index" << std::endl;
 	}
@@ -138,28 +138,28 @@ void    PhoneBook::rec_and_del_first()
 void    PhoneBook::dumf_loop()
 {
 	std::string input;
-	bool keep;
+	bool exec;
 
 	std::cout << "Welcome to My dummie fool Contacts Book !";
 	std::cout << std::endl << "Available commands: ADD, SEARCH, EXIT"
         << std::endl;
 
-	keep = true;
-	while (keep && !std::cin.eof())
+	exec = true;
+	while (exec && !std::cin.eof())
 	{
 		std::cout << "> ";
 		getline(std::cin, input);
 		rtrim(input);
 
 		if (input.compare("EXIT") == 0)
-			keep = false;
+			exec = false;
 		else if (input.compare("ADD") == 0)
 			add();
 		else if (input.compare("SEARCH") == 0)
 			search();
 		else
 		{
-			std::cout << "Invalid command: " << input << std::endl;
+			std::cout << "Interm command: " << input << std::endl;
             std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
 		}
 	}

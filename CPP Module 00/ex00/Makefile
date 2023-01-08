@@ -8,12 +8,14 @@ CXX			=	c++
 
 CXXFLAGS	=	-Wall -Werror -Wextra -I.
 
+STDFLAG		=	-std=c++98
+
 RM			=	rm -f
 
 all			=	$(NAME)
 
 $(NAME):		$(OBJS)
-					$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+					$(CXX) $(CXXFLAGS) $(STDFLAG) -o $(NAME) $(OBJS)
 
 clean:
 				$(RM) $(OBJS)

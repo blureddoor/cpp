@@ -8,7 +8,6 @@
         "__locale": "cpp",
         "__mutex_base": "cpp",
         "__nullptr": "cpp",
-        "__split_buffer": "cpp",
         "__string": "cpp",
         "__threading_support": "cpp",
         "__tuple": "cpp",
@@ -36,7 +35,6 @@
         "istream": "cpp",
         "iterator": "cpp",
         "limits": "cpp",
-        "list": "cpp",
         "locale": "cpp",
         "memory": "cpp",
         "mutex": "cpp",
@@ -51,9 +49,6 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "utility": "cpp",
-        "vector": "cpp",
-        "stack": "cpp",
-        "deque": "cpp"
+        "utility": "cpp"
     }
 }

@@ -6,15 +6,13 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:01:05 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/29 19:59:38 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/08 13:29:06 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
 #include "utils.hpp"
-#include <iostream>
-#include <cstring>
-#include <cctype>
 
 
 Contact::Contact()

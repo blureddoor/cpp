@@ -2,7 +2,7 @@ SRCS		=	PhoneBook.cpp Contact.cpp main.cpp utils.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-NAME		=	dumf
+NAME		=	dumdum
 
 CXX			=	c++
 

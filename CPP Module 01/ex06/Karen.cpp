@@ -6,27 +6,11 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:23:01 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 11:30:08 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/08 13:28:49 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Karen.hpp"
-
-void Karen::complain(std::string level)
-{
-	bool	check_level = false;
-
-	for (int i = 0; i < 4 ; i++)
-	{
-		if (check_level || status[i].m_name == level)
-		{
-			(this->*(status[i].ptr))();
-			check_level = true;
-		}
-	}
-	if (check_level == false)
-		etc();
-}
 
 Karen::Karen(void)
 {
@@ -44,6 +28,24 @@ void Karen::init(void)
 	status[3].m_name = "error";
 	status[3].ptr = &Karen::error;
 }
+
+void Karen::complain(std::string level)
+{
+	bool	check_level = false;
+
+	for (int i = 0; i < 4 ; i++)
+	{
+		if (check_level || status[i].m_name == level)
+		{
+			(this->*(status[i].ptr))();
+			check_level = true;
+		}
+	}
+	if (check_level == false)
+		etc();
+}
+
+
 
 void    Karen::debug(void)
 {
