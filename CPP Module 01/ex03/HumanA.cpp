@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:19:31 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 11:25:54 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:20:16 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ HumanA::~HumanA()
 // NAME attacks with his WEAPON_TYPE
 void	HumanA::attack( void ) const
 {
-	std::cout << this->m_name << " attacks with his "
+	std::cout << this->m_name << " attacks with their "
 				<< this->m_weapon.get_type() << std::endl;
 }

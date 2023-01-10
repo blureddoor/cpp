@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:29:31 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 11:26:21 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:55:15 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	Zombie::announce( void ) const
 {
-	std::cout << this->m_name << ": " << "BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->m_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::Zombie()

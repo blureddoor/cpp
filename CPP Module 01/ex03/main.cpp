@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:53:57 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 11:57:17 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:23:09 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,6 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
+	
+	return 0;
 }  

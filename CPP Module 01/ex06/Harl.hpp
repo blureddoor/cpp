@@ -1,23 +1,26 @@
-#ifndef KAREN_H
-# define KAREN_H
+#ifndef HARL_H
+# define HARL_H
 
 # include <iostream>
 # include <string>
+# include <stdlib.h>
 
 
-class Karen{
+class Harl{
 	public:
+		Harl(void);
 		void complain(std::string level);
-		Karen(void);
 		void etc(void);
 
 	private:
 		typedef struct s_status
 		{
 					std::string m_name;
-					void(Karen::*ptr)(void);
+					void(Harl::*ptr)(void);
 		}			t_status;
-		t_status	status[4];
+		t_status	m_status[4];
+//		std::string	m_name;
+
 		void		debug(void);
 		void		info(void);
 		void		warning(void);

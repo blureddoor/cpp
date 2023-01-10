@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:37:26 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 12:03:28 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:11:21 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main(void)
 
 	std::cout << "Value of the string:	" << std::endl;
 	std::cout << "----------------------------------------" << std::endl;
-	std::cout << "String:				" << str << std::endl;
+	std::cout << "String value:			" << str << std::endl;
 	std::cout << "	via stringPTR: 		" << *stringPTR << std::endl;
 	std::cout << "	via stringREF: 		" << stringREF << std::endl;
 	

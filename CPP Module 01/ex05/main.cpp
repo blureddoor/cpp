@@ -6,20 +6,20 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 19:59:25 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/08 13:28:52 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:22:37 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int main(void)
 {
-	Karen k;
+	Harl h;
 
-	k.complain("debug");
-	k.complain("info");
-	k.complain("warning");
-	k.complain("error");
+	h.complain("DEBUG");
+	h.complain("INFO");
+	h.complain("WARNING");
+	h.complain("ERROR");
 }
