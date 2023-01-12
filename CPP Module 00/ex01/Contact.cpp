@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:01:05 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/08 13:29:06 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/12 21:27:58 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,21 @@ Contact::Contact()
 }
 
 /*
+ * This method check if a string is not empty 
+ */
+
+bool Contact::is_valid_str(std::string str)
+{
+	if (str.compare("") == 0)
+		return false;
+	return true;
+}
+
+/*
  * This method checks if Contact::phone_number has a valid lenght and
  * is only composed by digits.
  */
+
 bool    Contact::is_valid_phone_number()
 {
 	if (m_phone_number.length() != 9)
@@ -43,25 +55,43 @@ bool    Contact::is_valid_phone_number()
  */
 void    Contact::read_contact()
 {
-	std::cout << "First name: ";
-	getline(std::cin, m_first_name);
-	rtrim(m_first_name);
-	std::cout << "Last name: ";
-	getline(std::cin, m_last_name);
-	rtrim(m_last_name);
-	std::cout << "Nickname: ";
-	getline(std::cin, m_nickname);
-	rtrim(m_nickname);
+	do
+	{
+		std::cout << "First name: ";
+		getline(std::cin, m_first_name);
+	}
+	while (!std::cin.eof() && !is_valid_str(m_first_name));
+//	rtrim(m_first_name);
+	do
+	{
+		std::cout << "Last name: ";
+		getline(std::cin, m_last_name);
+	} 
+	while (!std::cin.eof() && !is_valid_str(m_last_name));
+//	rtrim(m_last_name);
+	
+	do
+	{
+		std::cout << "Nickname: ";
+		getline(std::cin, m_nickname);
+	}
+	while (!std::cin.eof() && !is_valid_str(m_nickname));
+//	rtrim(m_nickname);
+	
 	do
 	{
 		std::cout << "Phone number: ";
 		getline(std::cin, m_phone_number);
 	}
 	while (!std::cin.eof() && !is_valid_phone_number());
- 
-	std::cout << "Darkest secret: ";
-	getline(std::cin, m_darkest_secret);
-	rtrim(m_darkest_secret);
+
+	do
+	{
+		std::cout << "Darkest secret: ";
+		getline(std::cin, m_darkest_secret);
+	}
+	while (!std::cin.eof() && !is_valid_str(m_darkest_secret));
+//	rtrim(m_darkest_secret);
 }
 
 /*

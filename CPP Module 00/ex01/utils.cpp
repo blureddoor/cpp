@@ -6,13 +6,14 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:01:05 by lvintila          #+#    #+#             */
-/*   Updated: 2022/11/29 20:09:20 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/12 21:14:59 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.hpp"
 #include <cstring>
 #include <cctype>
+#include <iostream>
 
 /*
  * This function removes the characters at the end of str that are contained in
@@ -24,7 +25,7 @@ void    rtrim(std::string &str, const char *chars)
 	long long i;
 
 	if (str.length() == 0)
-		return;
+		return ;
 	i = str.length() - 1;
 	while (i >= 0 && strchr(chars, str[i]))
 		str.erase(i--);

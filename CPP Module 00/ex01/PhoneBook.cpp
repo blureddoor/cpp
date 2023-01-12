@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:55:06 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/08 13:29:10 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/12 20:24:29 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,7 +159,7 @@ void    PhoneBook::dumf_loop()
 			search();
 		else
 		{
-			std::cout << "Interm command: " << input << std::endl;
+			std::cout << "Wrong command : " << input << std::endl;
             std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
 		}
 	}

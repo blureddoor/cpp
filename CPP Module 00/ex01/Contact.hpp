@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:20:36 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/08 13:29:07 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/12 21:05:14 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class Contact
 		void read_contact();
 		void display_contact();
 		bool is_valid_phone_number();
+		bool is_valid_str(std::string str);
 
 		// Getters
 		std::string get_first_name();

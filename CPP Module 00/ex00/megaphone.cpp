@@ -6,12 +6,11 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:01:06 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/08 13:29:17 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/12 19:36:26 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <locale>
 #include <string>
 
 
