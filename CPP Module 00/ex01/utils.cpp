@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:01:05 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/12 21:14:59 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/21 12:32:25 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 #include <iostream>
 
 /*
- * This function removes the characters at the end of str that are contained in
+ * removes the characters (\n) at the end of str that are contained in
  * the chars string.
  */
 
-void    rtrim(std::string &str, const char *chars)
+void    ft_trim_n(std::string &str, const char *chars)
 {
 	long long i;
 
@@ -32,7 +32,7 @@ void    rtrim(std::string &str, const char *chars)
 }
 
 /*
- * This function cuts the passed string if its longer than max_len and
+ * cuts the passed string if its longer than max_len and
  * replaces the last character with a dot.
  */
 
@@ -45,11 +45,11 @@ std::string  cut_and_dot(std::string str, size_t max_len)
 }
 
 /*
- * This function returns true if the passed string is only composed by
+ * returns true if the passed string is only composed by
  * digits.
- */
+*/ 
 
-bool    is_natural_number(std::string str)
+bool    its_only_digits(std::string str)
 {
 	for (size_t i = 0; i < str.length(); i++)
 	{
@@ -58,4 +58,3 @@ bool    is_natural_number(std::string str)
 	}
 	return (str.length() > 0);
 }
-

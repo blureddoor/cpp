@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:55:06 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/12 20:24:29 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/21 12:32:05 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ PhoneBook::PhoneBook()
 }
 
 /*
- * This method adds a new contact to the array, after checking if its full.
+ * Add a new contact to the array, after checking if its full.
  */
 
 void    PhoneBook::add()
@@ -34,18 +34,18 @@ void    PhoneBook::add()
 		std::cout << "The limit of " << MAX_CONTACTS
             << " contacts has been reached";
 		std::cout << std::endl << "Do you wish to overwrite the first contact to ";
-		std::cout << "make room for a new one?" << std::endl;
+		std::cout << "record a new one?" << std::endl;
 		do
 		{
 			std::cout << "[y/n] > ";
             getline(std::cin, input);
-            rtrim(input);
+            ft_trim_n(input);
 		}
 		while (input.compare("y") != 0 && input.compare("n") != 0);
 		
 		if (input.compare("y") == 0)
 		{
-			rec_and_del_first();
+			write_last_del_first();
 			m_capacity--;
 		}
 		else
@@ -57,7 +57,7 @@ void    PhoneBook::add()
 }
 
 /*
- * This method displays the table for the SEARCH functionality with a
+ * displays the table for the SEARCH functionality with a
  * resume of the stored contacts.
  */
 
@@ -87,7 +87,7 @@ void    PhoneBook::display_search_table()
 }
 
 /*
- * This method shows the user a table with the stored contacts and then it
+ * Show the user a table with the stored contacts and then it
  * prompts to select one to display its full data.
  */
 
@@ -95,7 +95,7 @@ void    PhoneBook::display_search_table()
 void    PhoneBook::search()
 {
 	std::string input;
-	bool term;
+	bool index;
 
 	if (m_capacity == 0)
 	{
@@ -105,15 +105,15 @@ void    PhoneBook::search()
 	
 	display_search_table();
 
-	term = false;
-	while (!term)
+	index = false;
+	while (!index)
 	{
 		std::cout << "Index > ";
 		getline(std::cin, input);
-		rtrim(input);
+		ft_trim_n(input);
 
-		if (is_natural_number(input) && atoi(input.c_str()) < m_capacity)
-			term = true;
+		if (its_only_digits(input) && atoi(input.c_str()) < m_capacity)
+			index = true;
 		else
 			std::cout << input << ": invalid index" << std::endl;
 	}
@@ -121,38 +121,38 @@ void    PhoneBook::search()
 }
 
 /*
- * This method moves all the contacts one position down overwriting
- * the first element.
+ * moves all the contacts one position down overwriting the first element wit
+ * the new one.
  */
 
-void    PhoneBook::rec_and_del_first()
+void    PhoneBook::write_last_del_first()
 {
 	for (int i = 1; i < MAX_CONTACTS; i++)
 		contacts[i - 1] = contacts[i];
 }
 
 /*
- * This method keeps asking the user for commands until an EXIT is introduced.
+ * loop that keeps asking the user for commands until an EXIT is introduced.
  */
 
-void    PhoneBook::dumf_loop()
+void    PhoneBook::my_agenda()
 {
 	std::string input;
-	bool exec;
+	bool cmd;
 
-	std::cout << "Welcome to My dummie fool Contacts Book !";
+	std::cout << "Welcome to My Dummie-Fool Contacts Book !";
 	std::cout << std::endl << "Available commands: ADD, SEARCH, EXIT"
         << std::endl;
 
-	exec = true;
-	while (exec && !std::cin.eof())
+	cmd = true;
+	while (cmd && !std::cin.eof())
 	{
 		std::cout << "> ";
 		getline(std::cin, input);
-		rtrim(input);
+		ft_trim_n(input);
 
 		if (input.compare("EXIT") == 0)
-			exec = false;
+			cmd = false;
 		else if (input.compare("ADD") == 0)
 			add();
 		else if (input.compare("SEARCH") == 0)

@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 22:01:35 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/08 13:29:11 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/21 11:56:47 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ class PhoneBook
 		void add();
 		void display_search_table();
 		void search();
-		void rec_and_del_first();
-		void dumf_loop();
+		void write_last_del_first();
+		void my_agenda();
 };
 
 #endif
