@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/22 13:10:15 by lvintila          #+#    #+#             */
+/*   Updated: 2023/01/22 13:10:18 by lvintila         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HARL_H
 # define HARL_H
 
@@ -21,8 +33,6 @@ class Harl{
 		void 		info(void);
 		void 		warning(void);
 		void		error(void);
-
-		void		init(void);
 };
 
 #endif

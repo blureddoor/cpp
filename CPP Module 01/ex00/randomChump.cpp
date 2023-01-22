@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:43:18 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 11:26:52 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/22 09:41:05 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	randomChump( std::string name )
 {
-	Zombie randomChump = Zombie(name);
-
-	randomChump.announce();
+	Zombie rndmCh = Zombie(name);
+	rndmCh.announce();
 }

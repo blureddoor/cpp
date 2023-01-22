@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:24:42 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/16 11:41:08 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/22 11:24:15 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Weapon::~Weapon()
 }
 
 
-// set type of his own (if there any) weapon
+// get type of his own (if there any) weapon
 std::string	const &Weapon::get_type() const
 {
 	return (this->m_type);

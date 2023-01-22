@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:31:54 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/10 18:05:33 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/22 10:17:34 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Zombie*	zombieHorde( int N, std::string name )
 
 	for (int i = 0; i < N; i++)
 	{
-//		name.clear();
 		std::string nickname;
 		for (int j = 0; j < 7; j++)
 		{
@@ -32,7 +31,7 @@ Zombie*	zombieHorde( int N, std::string name )
 				if (j == 0)
 					nickname = "AEIOU"[rand() % 5];
 				else
-					nickname += "eiaou"[rand() % 5];	
+					nickname += "eaiuoaw"[rand() % 7];	
 			}
 		}
 		horde[i].setName(name + " " + nickname);

@@ -1,12 +1,12 @@
-SRCS		=	main.cpp\
+SRCS		=	main.cpp ft_replace.cpp\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
 NAME		=	replace
 
-CXX			=	clang++
+CXX			=	c++
 
-CXXFLAGS	=	-Wall -Werror -Wextra -I.
+CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98 -I.
 
 RM			=	rm -f
 

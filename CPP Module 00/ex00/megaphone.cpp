@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:01:06 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/12 19:36:26 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/22 09:16:15 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
     {
         for (int i = 1; i < argc; i++)
         {
-            std::string str (argv[i]);
+            std::string str(argv[i]);
             for (size_t j = 0; j < str.length(); j++)
                 std::cout << (char)std::toupper(str[j]);
         }

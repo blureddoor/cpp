@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:29:31 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/10 17:55:15 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/22 10:19:55 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	Zombie::announce( void ) const
 
 Zombie::Zombie()
 {
-std::cout << "this is constructor of zombieHorde" << std::endl;
+std::cout << "this is the constructor of zombieHorde" << std::endl;
 }
 
 void	Zombie::set_name(std::string new_name)

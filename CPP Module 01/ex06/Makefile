@@ -4,9 +4,9 @@ OBJS		=	$(SRCS:.cpp=.o)
 
 NAME		=	harlFilter
 
-CXX			=	clang++
+CXX			=	c++
 
-CXXFLAGS	=	-Wall -Werror -Wextra -I.
+CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98 -I.
 
 RM			=	rm -f
 

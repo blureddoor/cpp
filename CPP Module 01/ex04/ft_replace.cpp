@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ft_replace.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 21:50:37 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 12:55:50 by lvintila         ###   ########.fr       */
+/*   Created: 2023/01/22 11:59:03 by lvintila          #+#    #+#             */
+/*   Updated: 2023/01/22 12:00:37 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "ft_replace.hpp"
 
-int main(int argc, char **argv)
+void    ft_replace(std::string *line,
+	std::string to_replace, std::string replace_whith)
 {
-	Harl h;
-	
-	if (argc == 1 || argc > 2)
-		exit(1);
-	h.complain(argv[1]);
-	return 0;
+	size_t	start_pos;
+
+	while ((start_pos = (*line).find(to_replace)) != std::string::npos)
+	{
+		(*line).erase(start_pos, to_replace.length());
+		(*line).insert(start_pos, replace_whith);
+	}
 }

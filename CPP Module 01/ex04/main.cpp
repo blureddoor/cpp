@@ -6,25 +6,14 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 22:13:20 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/10 18:27:52 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/01/22 12:00:35 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-
-void    ft_replace(std::string *line,
-	std::string to_replace, std::string replace_whith)
-{
-	size_t	start_pos;
-
-	while ((start_pos = (*line).find(to_replace)) != std::string::npos)
-	{
-		(*line).erase(start_pos, to_replace.length());
-		(*line).insert(start_pos, replace_whith);
-	}
-}
+#include "ft_replace.hpp"
 
 int	main(int argc, char **argv)
 {
