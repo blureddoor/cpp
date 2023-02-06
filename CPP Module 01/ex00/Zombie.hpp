@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 09:22:36 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 09:22:39 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:07:34 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@
 class	Zombie
 {
 	private:
-		std::string	m_name;
+		std::string	name;
 	public:
 		Zombie(std::string name);
 		~Zombie(void);
 		void	announce(void);
 };
 
-/* Return pointer to Zombie object allocated with "new"*/
+/* Return pointer to Zombie object allocated with "new" */
 Zombie* newZombie(std::string name);
 
-/*Creates new Zombie created on the stack */
+/* Creates new Zombie created on the stack */
 void	randomChump(std::string name);
 #endif

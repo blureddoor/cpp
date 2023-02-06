@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:37:26 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 11:13:24 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:51:23 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,18 @@ int main(void)
 	
 	std::cout << "Address of the string:" << std::endl;
 	std::cout << "--------------------------------------" << std::endl;
-	std::cout << "	String memory address:			" << &str << std::endl;
-	std::cout << "	String memory adress via stringPTR: 	" << stringPTR << std::endl;
-	std::cout << "	String memory adress via stringREF: 	" << &stringREF << std::endl;
+	std::cout << "	String memory address:				" << &str << std::endl;
+	std::cout << "	String memory adress contained in stringPTR: 	" << stringPTR << std::endl;
+	std::cout << "	String memory adress contained in stringREF: 	" << &stringREF << std::endl;
 
 	// Display the value
 	std::cout << std::endl;
 
 	std::cout << "Value of the string:	" << std::endl;
 	std::cout << "--------------------------------------" << std::endl;
-	std::cout << "	String value:				" << str << std::endl;
-	std::cout << "	String value via stringPTR: 		" << *stringPTR << std::endl;
-	std::cout << "	String value via stringREF: 		"<< stringREF << std::endl;
+	std::cout << "	String value:					" << str << std::endl;
+	std::cout << "	String value pointed to by stringPTR: 		" << *stringPTR << std::endl;
+	std::cout << "	String value pointed to by stringREF: 		"<< stringREF << std::endl;
 	
 	std::cout << std::endl;
 	return (0);

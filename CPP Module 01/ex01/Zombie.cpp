@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:28:36 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 10:20:32 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:13:10 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Zombie::Zombie(void)
 {
-	this->m_name = "";
-	std::cout << "Default Constructor: Zoombie object" << this->m_name
+	this->m_name = "zombieHorde";
+	std::cout << "Default Constructor: Zoombie object " << this->m_name
 		<< " was created" << std::endl;
 }
 
