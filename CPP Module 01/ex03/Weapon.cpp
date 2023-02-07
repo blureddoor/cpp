@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:24:42 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 11:24:15 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/07 20:02:42 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "Weapon.hpp"
 
 // constructor Weapon
-Weapon::Weapon(std::string type) : m_type(type)
+Weapon::Weapon(std::string type) : type(type)
 {
 }
 
@@ -28,10 +28,10 @@ Weapon::~Weapon()
 // get type of his own (if there any) weapon
 std::string	const &Weapon::get_type() const
 {
-	return (this->m_type);
+	return (this->type);
 }
 // Set new type of weaapon
 void	Weapon::setType(std::string new_type)
 {
-	this->m_type = new_type;
+	this->type = new_type;
 }

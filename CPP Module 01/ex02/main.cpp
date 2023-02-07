@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:37:26 by lvintila          #+#    #+#             */
-/*   Updated: 2023/02/06 21:51:23 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/07 21:00:26 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(void)
 	// Always constant and not NULL
 	// As with const variables, assignation during initialization is needed
 	std::string	&stringREF = str;
-
+	
 	// Display the address
 	std::cout << std::endl;
 	

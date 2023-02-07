@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 22:13:20 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 12:00:35 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/07 21:37:36 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 		return (-1);
 	}
 	/*
+	
 	 * input filestream alternative:
 	 * fstream file;
 	 * file.open("test.txt", ios :: in);

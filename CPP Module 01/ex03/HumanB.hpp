@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 11:28:07 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 11:28:10 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/07 20:45:48 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class HumanB
 		void setWeapon(Weapon &new_weapon);
 	private:
 		Weapon		*m_weapon;
-		std::string	m_name;
+		std::string	name;
 };
 
 #endif

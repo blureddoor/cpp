@@ -1,13 +1,14 @@
-I'm replacing all the occurrence of "1" with word "one"
-1
+I am <*one> replacing all <1> <*one> the occurrence of "1" with word "*one"
+1 <*one>
 123456789
+*one due tre quatro cinque 
 1 1
 1 1 "one" "one"
 esto es un 1
-y este es tambien un "1"_one
-1 2 3 4 5 6 7 8 9 10 11 19 29 39 299 199 119 
-nine one one
-nineoneone
-112oneone
-11 22 33 111 331one 2210
+y este one es tambien un "1"_one
+1-one, 2-dos 3-tres 12-onedue* 5 6 7 8 9 *one10 *one1*one1*one 1*one9 29 39 299 199 119 
+nine *one *one *one three
+nine*one*onethree
+1123*one*oneduetres
+11 *one *one 22 due* due* 33 111 331*one 2210
 1

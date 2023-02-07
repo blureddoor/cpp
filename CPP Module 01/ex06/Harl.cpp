@@ -6,40 +6,38 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:23:01 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 13:04:20 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/07 23:25:36 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 Harl::Harl(void)
-{
-	m_status[0].m_name = "DEBUG";
-	m_status[1].m_name = "INFO";
-	m_status[2].m_name = "WARNING";
-	m_status[3].m_name = "ERROR";
-}
+{}
 
 void Harl::complain(std::string level)
 {
-	int opcion = 0;
-	int i = 0;
-	while (i < 4)
+	std::string levels[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+	int i;
+	for ( i = 0; i < 4; i++ )
 	{
-		if(m_status[i++].m_name == level)
-			opcion = i;
+		if(levels[i] == level)
+			break;
 	}
-	switch(opcion)
+	switch(i)
 	{
-		case 1 : debug();info();warning();error();
+		case 0 : 
+			this->debug();
+		case 1: 
+			this->info();
+		case 2: 
+			this->warning();
+		case 3: 
+			this->error();
 			break;
-		case 2: info();warning();error();
-			break;
-		case 3: warning();error();
-			break;
-		case 4: error();
-			break;
-		default: etc();
+		default:
+			std::cout << "[ Probably complaining about insgnificant" 
+				" problems ] " << std::endl;
 	}
 }
 
@@ -77,10 +75,4 @@ void    Harl::error(void)
 	std::cout << "This is unacceptable, I want to speak";
 	std::cout << " to the manager now."<< std::endl;
 	std::cout << std::endl;
-}
-
-void	Harl::etc(void)
-{
-	std::cout << "[ Probably complaining about insignificant problems ]"
-		<< std::endl;
 }

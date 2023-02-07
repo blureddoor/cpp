@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 13:10:51 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 13:10:53 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/07 20:02:28 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Weapon
 		void	setType(std::string new_type);
 
 	private:
-		std::string	m_type;
+		std::string	type;
 };
 
 #endif
