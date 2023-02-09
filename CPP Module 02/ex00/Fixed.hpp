@@ -25,17 +25,20 @@ class   Fixed
         /*
          * Constructor:
          */
+
         Fixed();
         
         /*
          * Destructor:
          */
+
         ~Fixed();
         
         /*
          * Copy Constructor:
          * a constructor which allows to create a copy of different instance
          */
+
         Fixed(Fixed const &src);
 
         /* 
@@ -44,6 +47,7 @@ class   Fixed
 		 * not a const function because our instance will be modified (ex: a = 14)
 		 * Returns a reference to allow us to do "a = b" or "a = b = c" or "a = b = c = d"
          */
+        
         Fixed &operator=(Fixed const & rhs);
         
         int getRawBits( void ) const;

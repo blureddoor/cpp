@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 11:28:07 by lvintila          #+#    #+#             */
-/*   Updated: 2023/02/07 20:45:48 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:23:45 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ class HumanB
 		void attack( void ) const;
 		void setWeapon(Weapon &new_weapon);
 	private:
-		Weapon		*m_weapon;
 		std::string	name;
+		Weapon		*m_weapon;
+	/* 
+	 * Make it pointer to be able to assign a new value to it
+	 */
 };
 
 #endif

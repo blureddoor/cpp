@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 11:28:25 by lvintila          #+#    #+#             */
-/*   Updated: 2023/02/07 20:33:27 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:41:01 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ class HumanA
 	private:
 		std::string	name;
 		Weapon		&m_weapon;
+	/* 
+	 * We reference it since the assigned object is already passed
+	 * and we are not going to assign anything new to it 
+	 */
 };
 
 #endif

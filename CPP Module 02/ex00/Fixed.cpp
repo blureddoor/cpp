@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:24:33 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/30 10:35:16 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/09 21:41:54 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,16 @@ int Fixed::getRawBits( void ) const
 
 void Fixed::setRawBits ( int const raw )
 {
-    //std::cout << "setRawBits member function called" << std::endl;
+    // std::cout << "   setRawBits member function called" << std::endl;
     this->m_b = raw;
 }
 
-// Constructor
 Fixed::Fixed()
 {
     this->m_b = 0;
     std::cout << "Default constructor called" << std::endl;
 }
 
-// Destructor
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;

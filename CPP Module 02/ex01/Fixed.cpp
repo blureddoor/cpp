@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:24:33 by lvintila          #+#    #+#             */
-/*   Updated: 2022/10/30 11:30:03 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/09 21:47:41 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
  * Destructor called
  */
 
-/*********** ex00 ***********/
+/**** ex00 ****/
 
 int Fixed::getRawBits( void ) const
 {
@@ -49,14 +49,12 @@ void Fixed::setRawBits ( int const raw )
     this->m_b = raw;
 }
 
-// Constructor
 Fixed::Fixed()
 {
     this->m_b = 0;
     std::cout << "Default constructor called" << std::endl;
 }
 
-// Destructor
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;
@@ -74,7 +72,7 @@ Fixed &Fixed::operator=(Fixed const &rhs)
     setRawBits(rhs.getRawBits());
     return (*this);
 }
-/*********** ex01 ***********/
+/**** ex01 ****/
 
 /*
  * Int Constructor
@@ -103,6 +101,7 @@ Fixed::Fixed(float num_float)
 /*
  * We take the input value and divide it by 2 (2fractional_bts), puting the result into a float
  */
+
 float Fixed::toFloat(void) const
 {
     float f;

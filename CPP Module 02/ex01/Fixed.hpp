@@ -32,17 +32,20 @@ class   Fixed
         /*
          * Constructor:
          */
+
         Fixed();
         
         /*
          * Destructor:
          */
+
         ~Fixed();
         
         /*
          * Copy Constructor:
          * a constructor which allows to create a copy of different instance
          */
+
         Fixed(Fixed const &src);
 
         /* 
@@ -51,6 +54,7 @@ class   Fixed
 		 * not a const function because our instance will be modified (ex: a = 14)
 		 * Returns a reference to allow us to do "a = b" or "a = b = c" or "a = b = c = d"
          */
+
         Fixed &operator= (Fixed const & rhs);
         
         int getRawBits( void ) const;
@@ -67,6 +71,7 @@ class   Fixed
          * Constructor that accept an consts int as a parameter and
          * convert it to a value of 8:
          */
+
         Fixed(int const num); //int argument
 
         /*
@@ -74,6 +79,7 @@ class   Fixed
          * convert it to a fixed point (8)
          * the values of m_b it's inicialized as ex00:
          */
+        
         Fixed(float const num_float); //float argument
 
         float toFloat (void) const;

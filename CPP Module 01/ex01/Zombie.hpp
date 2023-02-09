@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 09:50:44 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 09:51:44 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:41:34 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class	Zombie
 {
 	private:
-		std::string	m_name;
+		std::string	name;
 	public:
 		Zombie(void);
 		~Zombie(void);
