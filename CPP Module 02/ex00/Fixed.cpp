@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:24:33 by lvintila          #+#    #+#             */
-/*   Updated: 2023/02/09 21:41:54 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/12 10:58:50 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,6 @@
  * Destructor called
  */
 
-int Fixed::getRawBits( void ) const
-{
-    std::cout << "getRawBits member function called" << std::endl;
-    return(this->m_b);
-}
-
-void Fixed::setRawBits ( int const raw )
-{
-    // std::cout << "   setRawBits member function called" << std::endl;
-    this->m_b = raw;
-}
 
 Fixed::Fixed()
 {
@@ -65,4 +54,16 @@ Fixed &Fixed::operator=(Fixed const &rhs)
     std::cout << "Assignation operator called" << std::endl;
     setRawBits(rhs.getRawBits());
     return (*this);
+}
+
+int Fixed::getRawBits( void ) const
+{
+    std::cout << "getRawBits member function called" << std::endl;
+    return(this->m_b);
+}
+
+void Fixed::setRawBits ( int const raw )
+{
+    // std::cout << "   setRawBits member function called" << std::endl;
+    this->m_b = raw;
 }

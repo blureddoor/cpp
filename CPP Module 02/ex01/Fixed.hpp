@@ -70,6 +70,7 @@ class   Fixed
         /*
          * Constructor that accept an consts int as a parameter and
          * convert it to a value of 8:
+         * the values of m_b it's inicialized as ex00:
          */
 
         Fixed(int const num); //int argument
@@ -77,7 +78,7 @@ class   Fixed
         /*
          * Constructor that accept an float const as a parameter and
          * convert it to a fixed point (8)
-         * the values of m_b it's inicialized as ex00:
+         * the values of m_b it's inicialized as ex00
          */
         
         Fixed(float const num_float); //float argument

@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:24:33 by lvintila          #+#    #+#             */
-/*   Updated: 2023/02/09 21:47:41 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/12 13:00:29 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,34 @@
 
 /**** ex00 ****/
 
+
+Fixed::Fixed()
+{
+    this->m_b = 0;
+    std::cout << "Default constructor called" << std::endl;
+    std::cout << this->m_w << std::endl;
+}
+
+Fixed::~Fixed()
+{
+    std::cout << "Destructor called" << std::endl;
+}
+
+Fixed::Fixed(Fixed const &src)
+{
+    std::cout << "Copy constructor called" << std::endl;
+    std::cout << this->m_w << std::endl;
+    *this = src;
+}
+
+Fixed &Fixed::operator=(Fixed const &rhs)
+{
+    std::cout << "Assignation operator called" << std::endl;
+    setRawBits(rhs.getRawBits());
+    return (*this);
+}
+
+
 int Fixed::getRawBits( void ) const
 {
    // std::cout << "getRawBits member function called" << std::endl;
@@ -49,33 +77,14 @@ void Fixed::setRawBits ( int const raw )
     this->m_b = raw;
 }
 
-Fixed::Fixed()
-{
-    this->m_b = 0;
-    std::cout << "Default constructor called" << std::endl;
-}
 
-Fixed::~Fixed()
-{
-    std::cout << "Destructor called" << std::endl;
-}
-
-Fixed::Fixed(Fixed const &src)
-{
-    std::cout << "Copy constructor called" << std::endl;
-    *this = src;
-}
-
-Fixed &Fixed::operator=(Fixed const &rhs)
-{
-    std::cout << "Assignation operator called" << std::endl;
-    setRawBits(rhs.getRawBits());
-    return (*this);
-}
 /**** ex01 ****/
 
 /*
  * Int Constructor
+ * Constructor that accept an consts int as a parameter and
+ * convert it to a value of 8:
+ * the values of m_b it's inicialized as ex00:
  */
 
 Fixed::Fixed(int num)
@@ -86,16 +95,40 @@ Fixed::Fixed(int num)
 
 /*
  * Float Constructor
+ * Constructor that accept an float const as a parameter and
+ * convert it to a fixed point (8)
+ * the values of m_b it's inicialized as ex00
+ *
  * https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
  * To convert from  floating-point to fixed-point, we follow this algorithm:
  * 1. Calculate x = floating_input * 2^(fractional_bits)
  * 2. Round x to the nearest whole number (e.g. round(x))
  * 3. Store the rounded x in an integer container
+ 
+  This is a constructor for a class called "Fixed". The constructor takes
+  a single argument, a floating-point number represented by num_float.
+
+  Sets the value of the fixed-point number stored in the object 
+  by calling the setRawBits method. The argument passed to the setRawBits method is 
+  an integer representation of num_float rounded to the nearest integer. 
+  The calculation performed to obtain this representation involves multiplying
+  num_float by a factor of (1 << this->m_w), where m_w is a member variable of the 
+  Fixed class that represents the number of fractional bits in the fixed-point representation.
+
+  This constructor is used to initialize a Fixed object from a floating-point number, 
+  by converting the floating-point number to a fixed-point representation
+  and storing it in the object.
+ 
  */
 Fixed::Fixed(float num_float)
 {
     std::cout << "Float constructor called" << std::endl;
     this->setRawBits((int)roundf(num_float * (1 << this->m_w)));
+    std::cout << "1 << this->m_b is: " << (1 << this->m_b) << std::endl;
+    std::cout << "this->m_b is: " << this->m_b << std::endl;
+    std::cout << "=====" << std::endl;
+    std::cout << "1 << this->m_w is: " << (1 << this->m_w) << std::endl;
+    std::cout << "this->m_w is: " << this->m_w << std::endl;
 }
 
 /*
@@ -113,6 +146,7 @@ float Fixed::toFloat(void) const
 /* fix >> FIXED_POINT */
 int Fixed::toInt (void) const
 {
+    std::cout << "getRawBits() >> this->m_w is:  " << (this->getRawBits() >> this->m_w) << std::endl;
     return (this->getRawBits() >> this->m_w);
 }
 
