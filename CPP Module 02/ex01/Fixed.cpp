@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:24:33 by lvintila          #+#    #+#             */
-/*   Updated: 2023/02/12 13:00:29 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/02/18 09:17:43 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ Fixed::Fixed()
 {
     this->m_b = 0;
     std::cout << "Default constructor called" << std::endl;
-    std::cout << this->m_w << std::endl;
 }
 
 Fixed::~Fixed()
@@ -53,7 +52,6 @@ Fixed::~Fixed()
 Fixed::Fixed(Fixed const &src)
 {
     std::cout << "Copy constructor called" << std::endl;
-    std::cout << this->m_w << std::endl;
     *this = src;
 }
 
@@ -67,13 +65,17 @@ Fixed &Fixed::operator=(Fixed const &rhs)
 
 int Fixed::getRawBits( void ) const
 {
-   // std::cout << "getRawBits member function called" << std::endl;
+    /*
+     * std::cout << "getRawBits member function called" << std::endl;
+     */
     return(this->m_b);
 }
 
 void Fixed::setRawBits ( int const raw )
 {
-    //std::cout << "setRawBits member function called" << std::endl;
+    /*
+     * std::cout << "setRawBits member function called" << std::endl;
+     */
     this->m_b = raw;
 }
 
@@ -104,35 +106,29 @@ Fixed::Fixed(int num)
  * 1. Calculate x = floating_input * 2^(fractional_bits)
  * 2. Round x to the nearest whole number (e.g. round(x))
  * 3. Store the rounded x in an integer container
- 
-  This is a constructor for a class called "Fixed". The constructor takes
-  a single argument, a floating-point number represented by num_float.
-
-  Sets the value of the fixed-point number stored in the object 
-  by calling the setRawBits method. The argument passed to the setRawBits method is 
-  an integer representation of num_float rounded to the nearest integer. 
-  The calculation performed to obtain this representation involves multiplying
-  num_float by a factor of (1 << this->m_w), where m_w is a member variable of the 
-  Fixed class that represents the number of fractional bits in the fixed-point representation.
-
-  This constructor is used to initialize a Fixed object from a floating-point number, 
-  by converting the floating-point number to a fixed-point representation
-  and storing it in the object.
- 
+ * This is a constructor for a class called "Fixed". The constructor takes
+ * a single argument, a floating-point number represented by num_float.
+ * 
+ * Sets the value of the fixed-point number stored in the object 
+ * by calling the setRawBits method. The argument passed to the setRawBits method is 
+ * an integer representation of num_float rounded to the nearest integer. 
+ * The calculation performed to obtain this representation involves multiplying
+ * num_float by a factor of (1 << this->m_w), where m_w is a member variable of the 
+ * Fixed class that represents the number of fractional bits in the fixed-point
+ * representation. This constructor is used to initialize a Fixed object from a floating-point number,
+ * by converting the floating-point number to a fixed-point representation
+ * and storing it in the object.
  */
+
 Fixed::Fixed(float num_float)
 {
     std::cout << "Float constructor called" << std::endl;
     this->setRawBits((int)roundf(num_float * (1 << this->m_w)));
-    std::cout << "1 << this->m_b is: " << (1 << this->m_b) << std::endl;
-    std::cout << "this->m_b is: " << this->m_b << std::endl;
-    std::cout << "=====" << std::endl;
-    std::cout << "1 << this->m_w is: " << (1 << this->m_w) << std::endl;
-    std::cout << "this->m_w is: " << this->m_w << std::endl;
 }
 
 /*
- * We take the input value and divide it by 2 (2fractional_bts), puting the result into a float
+ * We take the input value and divide it by  2 elevated to (number of fractional_bts (m_w), 
+ * puting the result into a float
  */
 
 float Fixed::toFloat(void) const
@@ -144,21 +140,23 @@ float Fixed::toFloat(void) const
 }
 
 /* fix >> FIXED_POINT */
+
 int Fixed::toInt (void) const
 {
-    std::cout << "getRawBits() >> this->m_w is:  " << (this->getRawBits() >> this->m_w) << std::endl;
     return (this->getRawBits() >> this->m_w);
 }
 
 /* Operator overload (not a member function) */
+
 std::ostream &operator<<(std::ostream &o, Fixed const &rhs)
 {
     o << rhs.toFloat();
- 
-/*    std::cout <<std::endl << "RAW: " << rhs.getRawBits() << std::endl;
 
-    std::cout << std:: endl << "TOINT: " << rhs.toInt() << std::endl;
-	std::cout << std:: endl << "TOFLOAT: " << rhs.toFloat() << std::endl;
-*/
+    /*
+     * std::cout <<std::endl << "RAW: " << rhs.getRawBits() << std::endl;
+     * std::cout << std:: endl << "TOINT: " << rhs.toInt() << std::endl;
+     * std::cout << std:: endl << "TOFLOAT: " << rhs.toFloat() << std::endl;
+     */
+    
     return (o);
 }

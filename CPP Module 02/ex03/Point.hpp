@@ -12,12 +12,12 @@ class Point
         Fixed const m_x;
         Fixed const m_y;
     public:
-        Point();
-        ~Point();
-        Point(Point const &src);
-        Point (float const x, float const y);
+        Point(); // Un constructor por defecto que inicialice x e y a 0.
+        ~Point(); // Un destructor.
+        Point(Point const &src); // Un constructor de copia.
+        Point (float const x, float const y); //Un constructor que acepte dos parámetros de punto flotante constantes y que inicie x e y con esos valores.
         Point(Fixed const x, Fixed const y);
-        Point &operator= (Point & rhs);
+        Point &operator= (Point & rhs); // Una sobrecarga del operador de asignación
         void    setX(Fixed f);
         void    setY(Fixed f);
         Fixed   getX(void) const;
