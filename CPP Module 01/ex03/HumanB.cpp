@@ -6,26 +6,35 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:19:13 by lvintila          #+#    #+#             */
-/*   Updated: 2023/02/07 20:45:52 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/03/07 20:12:45 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-// Constructor (HumanB = without weapon (in the Constructor))
+/*
+ * Constructor (HumanB = without weapon (in the Constructor))
+ */
+
 HumanB::HumanB(std::string name)
 	: name(name)
 {
 	this->m_weapon = NULL;
 }
 
-// Destructor
+/*
+ * Destructor
+ */
+
 HumanB::~HumanB()
 {
 	
 }
 
-// attacks with his WEAPON_TYPE if there any
+/*
+ * attacks with his WEAPON_TYPE if there any
+ */
+
 void	HumanB::attack( void ) const
 {
 	if (this->m_weapon)
@@ -40,8 +49,12 @@ void	HumanB::attack( void ) const
 	}
 	
 }
-// set the type of weapon even if there is none (set initial weapon) 
-// or if there is, change it to the new one
+
+/*
+ * set the type of weapon even if there is none (set initial weapon) 
+ * or if there is, change it to the new one
+ */
+
 void HumanB::setWeapon(Weapon &new_weapon)
 {
 	this->m_weapon = &new_weapon;

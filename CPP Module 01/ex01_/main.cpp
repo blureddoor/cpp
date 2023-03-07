@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:41:39 by lvintila          #+#    #+#             */
-/*   Updated: 2023/02/08 17:02:33 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/03/07 19:49:15 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(void)
 {
 	int	size;
 
-	size = 100;
+	size = 10;
 	Zombie *horde;
 	
 	horde = zombieHorde(size, "Zombie horde member");
