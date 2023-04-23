@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 09:22:36 by lvintila          #+#    #+#             */
-/*   Updated: 2023/03/07 20:08:31 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/04/23 07:33:13 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class	Zombie
 	private:
 		std::string	name;
 	public:
+		Zombie();
 		Zombie(std::string name);
 		~Zombie(void);
 		void	announce(void);
@@ -28,12 +29,15 @@ class	Zombie
 
 /*
  * Return pointer to Zombie object allocated with "new"
+ * Create a Zombie, give it a name and return it so you
+ * can use it outside of function scope
  */
 
 Zombie* newZombie( std::string name );
 
 /*
- * Creates new Zombie on the stack
+ * Create new Zombie on the stack. Create a Zombie,
+ * give it a name and have the zombie announce itself
  */
 
 void	randomChump(std::string name);

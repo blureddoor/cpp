@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 22:13:20 by lvintila          #+#    #+#             */
-/*   Updated: 2023/03/07 20:38:13 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/04/23 11:35:19 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,50 +19,46 @@ int	main(int argc, char **argv)
 {
 	if (argc != 4 || !argv[2][0] || !argv[3][0])
 	{
-		std::cout << "Error: Arguments not valid" << std::endl;
+		std::cerr << "Usage: " << argv[0] << " <input_file> <string_to_replace> <string replace with>" << std::endl;
 		return (-1);
 	}
 	
+	
+	std::ifstream	ifs(argv[1]); // Create an instance of ifstream called ifs which contain "argv[1]" file
+	if (!ifs)
+	{
+		std::cerr << "Error: coulnd't open the input file " << argv[1] << std::endl;
+		return (-1);
+	}
 	/*
-	 * input filestream alternative:
-	 * fstream file;
-	 * file.open("test.txt", ios :: in);
+	 * Converts the first argument passed on the command line, which is a character array,
+	 * to an object of type "std::string"
 	 */
 	
-	std::ifstream	ifs(argv[1]); 
-	if (!ifs.is_open()) // Check if the file is open
-	{
-		std::cout << "Coulnd't open the input file" << std::endl;
-		return (-1);
-	}
 	std::string	file_name = (std::string)argv[1] + ".replace";
 	
-	/*
-     * output filestream alternative:
-	 * fstream file;
-	 * file.open("test.txt", ios :: out);
-     */
-	
 	std::ofstream	ofs(file_name);
-	if (!ofs.is_open())
+	if (!ofs)
 	{
-		std::cout << "Coulnd't open the output file" << std::endl;
+		std::cerr << "Error: coulnd't open the output file" << file_name << std::endl;
 		return (-1);
 	}
 	std::string	line_read;
-	std::string	to_replace = argv[2];
-	std::string	replace_with = argv[3];
+	std::string	s1(argv[2]);
+	std::string	s2(argv[3]);
+	if (s1.empty() || s2.empty() || s1 == s2)
+	{
+		std::cerr << "Error: invalid string arguments" << std::endl;
+		return -1;
+	}
 	while (getline(ifs, line_read))
 	{
-		ft_replace(&line_read, to_replace, replace_with);
-
-		/*
-		 * Don't add "\n" at the end of the file
-		 */
-		
+		ft_replace(line_read, s1, s2);	
 		if (!std::cin.eof()) // Check if stdin still has data to read
-			ofs << line_read << std::endl; 
+			ofs << line_read << std::endl;
 	}
 	ofs.close();
 	ifs.close();
+	std::cout << "Done!" << std::endl;
+	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:19:13 by lvintila          #+#    #+#             */
-/*   Updated: 2023/03/07 20:12:45 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/04/23 08:50:12 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ HumanB::~HumanB()
 }
 
 /*
- * attacks with his WEAPON_TYPE if there any
+ * attacks with their WEAPON_TYPE if there any
  */
 
 void	HumanB::attack( void ) const
 {
 	if (this->m_weapon)
 	{
-		std::cout << this->name << " attacks with his "
-				<< (*(this->m_weapon)).get_type() << std::endl;
+		std::cout << this->name << " attacks with their "
+				<< (this->m_weapon)->get_type() << std::endl;
 	}
 	else
 	{

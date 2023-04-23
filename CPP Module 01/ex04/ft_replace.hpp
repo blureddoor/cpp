@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 11:57:34 by lvintila          #+#    #+#             */
-/*   Updated: 2023/01/22 11:59:36 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/04/23 11:19:29 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <string>
 # include <iostream>
 
-void    ft_replace(std::string *line,
-	std::string to_replace, std::string replace_whith);
+void    ft_replace(std::string &line,
+	const std::string& s1, const std::string& s2);
 
 #endif
