@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:23:01 by lvintila          #+#    #+#             */
-/*   Updated: 2023/04/23 07:55:42 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/05/01 09:47:08 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Zombie::Zombie(): name("Zombie")
 Zombie::Zombie(std::string name)
 {
 	this->name = name;
-	std::cout << name << " created" << std::endl;
+	std::cout << "Copy Constructor: " << name << " created" << std::endl;
 }
 
 Zombie::~Zombie()
