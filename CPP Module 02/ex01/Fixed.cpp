@@ -6,7 +6,7 @@
 /*   By: lvintila <lvintila@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:24:33 by lvintila          #+#    #+#             */
-/*   Updated: 2023/03/08 15:14:19 by lvintila         ###   ########.fr       */
+/*   Updated: 2023/05/15 09:43:14 by lvintila         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,6 @@ Fixed::Fixed(int num)
  * 3. Store the rounded x in an integer container
  * This is a constructor for a class called "Fixed". The constructor takes
  * a single argument, a floating-point number represented by num_float.
- * 
  * Sets the value of the fixed-point number stored in the object 
  * by calling the setRawBits method. The argument passed to the setRawBits method is 
  * an integer representation of num_float rounded to the nearest integer. 
